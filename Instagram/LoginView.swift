@@ -38,13 +38,16 @@ struct LoginView: View {
                 
                 // Login button
                 Button(action: {}) {
-                    Text("Log In")
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(.purple.opacity(0.4))
-                        .cornerRadius(12)
-                        .padding(.bottom, 10)
+                    NavigationLink(destination: DashboardView()) {
+                        Text("Log In")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(.purple.opacity(0.4))
+                            .cornerRadius(12)
+                            .padding(.bottom, 10)
+                    }
+                    .navigationBarHidden(true)
                 }
                 
                 // Forgot password button
