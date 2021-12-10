@@ -9,16 +9,30 @@
 /* Begin PBXBuildFile section */
 		BF636FE8275F6D7100FE02DE /* InstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FE7275F6D7100FE02DE /* InstagramApp.swift */; };
 		BF636FEA275F6D7100FE02DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FE9275F6D7100FE02DE /* ContentView.swift */; };
-		BF636FEC275F6D7300FE02DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF636FEB275F6D7300FE02DE /* Assets.xcassets */; };
 		BF636FEF275F6D7300FE02DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF636FEE275F6D7300FE02DE /* Preview Assets.xcassets */; };
+		BF636FF6275F718400FE02DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF636FF5275F718400FE02DE /* Assets.xcassets */; };
+		BF636FF8275F721E00FE02DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FF7275F721E00FE02DE /* LoginView.swift */; };
+		BF7009BE2762FF6C00E9E077 /* IGTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009BD2762FF6C00E9E077 /* IGTextFieldView.swift */; };
+		BF7009C22763139600E9E077 /* UserStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009C12763139600E9E077 /* UserStateController.swift */; };
+		BF7009C427632D5800E9E077 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009C327632D5800E9E077 /* UserSettingView.swift */; };
+		BFFBB7162761C3670011A91B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7152761C3670011A91B /* HomeView.swift */; };
+		BFFBB7182761E0E80011A91B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7172761E0E80011A91B /* DashboardView.swift */; };
+		BFFBB71B276206070011A91B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB71A276206060011A91B /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF636FE4275F6D7100FE02DE /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF636FE7275F6D7100FE02DE /* InstagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramApp.swift; sourceTree = "<group>"; };
 		BF636FE9275F6D7100FE02DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BF636FEB275F6D7300FE02DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF636FEE275F6D7300FE02DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BF636FF5275F718400FE02DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
+		BF636FF7275F721E00FE02DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BF7009BD2762FF6C00E9E077 /* IGTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextFieldView.swift; sourceTree = "<group>"; };
+		BF7009C12763139600E9E077 /* UserStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateController.swift; sourceTree = "<group>"; };
+		BF7009C327632D5800E9E077 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
+		BFFBB7152761C3670011A91B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BFFBB7172761E0E80011A91B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		BFFBB71A276206060011A91B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +65,11 @@
 		BF636FE6275F6D7100FE02DE /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				BF636FF5275F718400FE02DE /* Assets.xcassets */,
 				BF636FE7275F6D7100FE02DE /* InstagramApp.swift */,
-				BF636FE9275F6D7100FE02DE /* ContentView.swift */,
-				BF636FEB275F6D7300FE02DE /* Assets.xcassets */,
+				BF7009B62762EDF200E9E077 /* Controller */,
+				BF7009B72762F93B00E9E077 /* Model */,
+				BF7009B52762EDE800E9E077 /* View */,
 				BF636FED275F6D7300FE02DE /* Preview Content */,
 			);
 			path = Instagram;
@@ -65,6 +81,43 @@
 				BF636FEE275F6D7300FE02DE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BF7009B52762EDE800E9E077 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF7009B82762F98A00E9E077 /* CommonView */,
+				BF636FE9275F6D7100FE02DE /* ContentView.swift */,
+				BFFBB71A276206060011A91B /* SignUpView.swift */,
+				BFFBB7152761C3670011A91B /* HomeView.swift */,
+				BF636FF7275F721E00FE02DE /* LoginView.swift */,
+				BFFBB7172761E0E80011A91B /* DashboardView.swift */,
+				BF7009C327632D5800E9E077 /* UserSettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF7009B62762EDF200E9E077 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF7009C12763139600E9E077 /* UserStateController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF7009B72762F93B00E9E077 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF7009B82762F98A00E9E077 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				BF7009BD2762FF6C00E9E077 /* IGTextFieldView.swift */,
+			);
+			path = CommonView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF636FEF275F6D7300FE02DE /* Preview Assets.xcassets in Resources */,
-				BF636FEC275F6D7300FE02DE /* Assets.xcassets in Resources */,
+				BF636FF6275F718400FE02DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF636FF8275F721E00FE02DE /* LoginView.swift in Sources */,
+				BFFBB7162761C3670011A91B /* HomeView.swift in Sources */,
+				BFFBB7182761E0E80011A91B /* DashboardView.swift in Sources */,
 				BF636FEA275F6D7100FE02DE /* ContentView.swift in Sources */,
+				BF7009BE2762FF6C00E9E077 /* IGTextFieldView.swift in Sources */,
+				BFFBB71B276206070011A91B /* SignUpView.swift in Sources */,
+				BF7009C427632D5800E9E077 /* UserSettingView.swift in Sources */,
 				BF636FE8275F6D7100FE02DE /* InstagramApp.swift in Sources */,
+				BF7009C22763139600E9E077 /* UserStateController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,9 +326,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Instagram/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Instagram/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -294,9 +355,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Instagram/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Instagram/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

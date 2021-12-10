@@ -9,11 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            Text("Instagram")
-                .font(Font.custom("Victor-Mono", size: 50.0))
+        ScrollView{
+            Text("NEW FEED")
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
 }
 
