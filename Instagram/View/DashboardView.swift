@@ -40,9 +40,9 @@ struct DashboardView: View {
                 case 0:
                     HomeView()
                 case 1:
-                    Color.black.edgesIgnoringSafeArea(.top)
+                    Color.blue.opacity(0.5).edgesIgnoringSafeArea(.top)
                 case 2:
-                    Color.green.edgesIgnoringSafeArea(.top)
+                    Color.orange.opacity(0.5).edgesIgnoringSafeArea(.top)
                 case 3:
                     UserSettingView()
 

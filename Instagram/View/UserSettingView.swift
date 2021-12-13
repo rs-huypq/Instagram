@@ -18,7 +18,7 @@ struct UserSettingView: View {
                     await state.signOut()
                 }
             } label: {
-                Image(systemName:  "rectangle.portrait.and.arrow.right")
+                Text("Log out")
             }
             Spacer()
         }

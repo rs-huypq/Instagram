@@ -58,13 +58,13 @@ struct LoginView: View {
                     
                     // Forgot password button
                     OtherLoginButton(title: "Forgot your password?", labelButton: "Get help signing in.",
-                                viewDestination: AnyView(Text("Forgot your password?")))
+                                     viewDestination: AnyView(Text("Forgot your password?")))
                     
                     Spacer()
                     
                     // Sign up button
                     OtherLoginButton(title: "Don't have an account?", labelButton: "Sign up",
-                                viewDestination: AnyView(SignUpView()))
+                                     viewDestination: AnyView(SignUpView()))
                 }
                 .padding()
                 .background(
