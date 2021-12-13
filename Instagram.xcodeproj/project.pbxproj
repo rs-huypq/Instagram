@@ -10,7 +10,6 @@
 		BF636FE8275F6D7100FE02DE /* InstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FE7275F6D7100FE02DE /* InstagramApp.swift */; };
 		BF636FEA275F6D7100FE02DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FE9275F6D7100FE02DE /* ContentView.swift */; };
 		BF636FEF275F6D7300FE02DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF636FEE275F6D7300FE02DE /* Preview Assets.xcassets */; };
-		BF636FF6275F718400FE02DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF636FF5275F718400FE02DE /* Assets.xcassets */; };
 		BF636FF8275F721E00FE02DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FF7275F721E00FE02DE /* LoginView.swift */; };
 		BF7009BE2762FF6C00E9E077 /* IGTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009BD2762FF6C00E9E077 /* IGTextFieldView.swift */; };
 		BF7009C22763139600E9E077 /* UserStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009C12763139600E9E077 /* UserStateController.swift */; };
@@ -18,6 +17,7 @@
 		BFFBB7162761C3670011A91B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7152761C3670011A91B /* HomeView.swift */; };
 		BFFBB7182761E0E80011A91B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7172761E0E80011A91B /* DashboardView.swift */; };
 		BFFBB71B276206070011A91B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB71A276206060011A91B /* SignUpView.swift */; };
+		BFFEBA1A276721DB000AD4E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFEBA19276721DB000AD4E2 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,6 @@
 		BF636FE7275F6D7100FE02DE /* InstagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramApp.swift; sourceTree = "<group>"; };
 		BF636FE9275F6D7100FE02DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF636FEE275F6D7300FE02DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BF636FF5275F718400FE02DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
 		BF636FF7275F721E00FE02DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BF7009BD2762FF6C00E9E077 /* IGTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextFieldView.swift; sourceTree = "<group>"; };
 		BF7009C12763139600E9E077 /* UserStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateController.swift; sourceTree = "<group>"; };
@@ -33,6 +32,7 @@
 		BFFBB7152761C3670011A91B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BFFBB7172761E0E80011A91B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		BFFBB71A276206060011A91B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		BFFEBA19276721DB000AD4E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 		BF636FE6275F6D7100FE02DE /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				BF636FF5275F718400FE02DE /* Assets.xcassets */,
+				BFFEBA19276721DB000AD4E2 /* Assets.xcassets */,
 				BF636FE7275F6D7100FE02DE /* InstagramApp.swift */,
 				BF7009B62762EDF200E9E077 /* Controller */,
 				BF7009B72762F93B00E9E077 /* Model */,
@@ -179,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF636FEF275F6D7300FE02DE /* Preview Assets.xcassets in Resources */,
-				BF636FF6275F718400FE02DE /* Assets.xcassets in Resources */,
+				BFFEBA1A276721DB000AD4E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
