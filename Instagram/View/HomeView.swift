@@ -79,19 +79,19 @@ func _buildPosts(userAvatar: [String], userName: [String]) -> some View {
                 // Action
                 HStack(spacing: 18) {
                     Button(action: {}){
-                        Image("like_unselected")
+                        Image(systemName: "heart")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 24, height: 24)
                     }
                     Button(action: {}){
-                        Image("comment")
+                        Image(systemName: "message")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 24, height: 24)
                     }
                     Button(action: {}){
-                        Image("send2")
+                        Image(systemName: "paperplane")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 24, height: 24)
@@ -100,10 +100,10 @@ func _buildPosts(userAvatar: [String], userName: [String]) -> some View {
                     Spacer()
                     
                     Button(action: {}){
-                        Image("ribbon")
+                        Image(systemName: "bookmark")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 18, height: 18)
+                            .frame(width: 16, height: 16)
                     }
                 }
                 .padding(.horizontal, 12)
@@ -122,6 +122,8 @@ func _buildPosts(userAvatar: [String], userName: [String]) -> some View {
         }
     }
 }
+
+//func _buildIcon(iconName: Sting)
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
