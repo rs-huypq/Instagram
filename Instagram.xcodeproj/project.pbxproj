@@ -7,32 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF32500B27682C300094F875 /* IGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32500A27682C300094F875 /* IGButton.swift */; };
 		BF636FE8275F6D7100FE02DE /* InstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FE7275F6D7100FE02DE /* InstagramApp.swift */; };
 		BF636FEA275F6D7100FE02DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FE9275F6D7100FE02DE /* ContentView.swift */; };
 		BF636FEF275F6D7300FE02DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF636FEE275F6D7300FE02DE /* Preview Assets.xcassets */; };
 		BF636FF8275F721E00FE02DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FF7275F721E00FE02DE /* LoginView.swift */; };
-		BF7009BE2762FF6C00E9E077 /* IGTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009BD2762FF6C00E9E077 /* IGTextFieldView.swift */; };
-		BF7009C22763139600E9E077 /* UserStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009C12763139600E9E077 /* UserStateController.swift */; };
+		BF7009BE2762FF6C00E9E077 /* IGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009BD2762FF6C00E9E077 /* IGTextField.swift */; };
+		BF7009C22763139600E9E077 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009C12763139600E9E077 /* LoginViewModel.swift */; };
 		BF7009C427632D5800E9E077 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009C327632D5800E9E077 /* UserSettingView.swift */; };
+		BF94D6E52769890900240970 /* IGLetterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94D6E42769890900240970 /* IGLetterButton.swift */; };
 		BFFBB7162761C3670011A91B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7152761C3670011A91B /* HomeView.swift */; };
 		BFFBB7182761E0E80011A91B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7172761E0E80011A91B /* DashboardView.swift */; };
 		BFFBB71B276206070011A91B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB71A276206060011A91B /* SignUpView.swift */; };
 		BFFEBA1A276721DB000AD4E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFEBA19276721DB000AD4E2 /* Assets.xcassets */; };
+		BFFEBA1D27673595000AD4E2 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFEBA1C27673595000AD4E2 /* AppStrings.swift */; };
+		BFFEBA1F27674769000AD4E2 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFEBA1E27674769000AD4E2 /* AppImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF32500A27682C300094F875 /* IGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGButton.swift; sourceTree = "<group>"; };
 		BF636FE4275F6D7100FE02DE /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF636FE7275F6D7100FE02DE /* InstagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramApp.swift; sourceTree = "<group>"; };
 		BF636FE9275F6D7100FE02DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF636FEE275F6D7300FE02DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF636FF7275F721E00FE02DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		BF7009BD2762FF6C00E9E077 /* IGTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextFieldView.swift; sourceTree = "<group>"; };
-		BF7009C12763139600E9E077 /* UserStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateController.swift; sourceTree = "<group>"; };
+		BF7009BD2762FF6C00E9E077 /* IGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextField.swift; sourceTree = "<group>"; };
+		BF7009C12763139600E9E077 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BF7009C327632D5800E9E077 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
+		BF94D6E42769890900240970 /* IGLetterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLetterButton.swift; sourceTree = "<group>"; };
 		BFFBB7152761C3670011A91B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BFFBB7172761E0E80011A91B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		BFFBB71A276206060011A91B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BFFEBA19276721DB000AD4E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFFEBA1C27673595000AD4E2 /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
+		BFFEBA1E27674769000AD4E2 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +74,11 @@
 			isa = PBXGroup;
 			children = (
 				BFFEBA19276721DB000AD4E2 /* Assets.xcassets */,
-				BF636FE7275F6D7100FE02DE /* InstagramApp.swift */,
-				BF7009B62762EDF200E9E077 /* Controller */,
+				BF7009B62762EDF200E9E077 /* ViewModel */,
 				BF7009B72762F93B00E9E077 /* Model */,
 				BF7009B52762EDE800E9E077 /* View */,
+				BFFEBA1B276734FF000AD4E2 /* Util */,
+				BF636FE7275F6D7100FE02DE /* InstagramApp.swift */,
 				BF636FED275F6D7300FE02DE /* Preview Content */,
 			);
 			path = Instagram;
@@ -97,12 +106,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		BF7009B62762EDF200E9E077 /* Controller */ = {
+		BF7009B62762EDF200E9E077 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BF7009C12763139600E9E077 /* UserStateController.swift */,
+				BF7009C12763139600E9E077 /* LoginViewModel.swift */,
 			);
-			path = Controller;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BF7009B72762F93B00E9E077 /* Model */ = {
@@ -115,9 +124,20 @@
 		BF7009B82762F98A00E9E077 /* CommonView */ = {
 			isa = PBXGroup;
 			children = (
-				BF7009BD2762FF6C00E9E077 /* IGTextFieldView.swift */,
+				BF7009BD2762FF6C00E9E077 /* IGTextField.swift */,
+				BF32500A27682C300094F875 /* IGButton.swift */,
+				BF94D6E42769890900240970 /* IGLetterButton.swift */,
 			);
 			path = CommonView;
+			sourceTree = "<group>";
+		};
+		BFFEBA1B276734FF000AD4E2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BFFEBA1C27673595000AD4E2 /* AppStrings.swift */,
+				BFFEBA1E27674769000AD4E2 /* AppImages.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +214,15 @@
 				BFFBB7162761C3670011A91B /* HomeView.swift in Sources */,
 				BFFBB7182761E0E80011A91B /* DashboardView.swift in Sources */,
 				BF636FEA275F6D7100FE02DE /* ContentView.swift in Sources */,
-				BF7009BE2762FF6C00E9E077 /* IGTextFieldView.swift in Sources */,
+				BFFEBA1F27674769000AD4E2 /* AppImages.swift in Sources */,
+				BF32500B27682C300094F875 /* IGButton.swift in Sources */,
+				BF7009BE2762FF6C00E9E077 /* IGTextField.swift in Sources */,
 				BFFBB71B276206070011A91B /* SignUpView.swift in Sources */,
+				BF94D6E52769890900240970 /* IGLetterButton.swift in Sources */,
+				BFFEBA1D27673595000AD4E2 /* AppStrings.swift in Sources */,
 				BF7009C427632D5800E9E077 /* UserSettingView.swift in Sources */,
 				BF636FE8275F6D7100FE02DE /* InstagramApp.swift in Sources */,
-				BF7009C22763139600E9E077 /* UserStateController.swift in Sources */,
+				BF7009C22763139600E9E077 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,10 +350,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "Instagram/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "Instagram/Preview\\ Content Instagram/Assets.xcassets";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -344,6 +370,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmo.dev.huypq.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -355,10 +382,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "Instagram/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "Instagram/Preview\\ Content Instagram/Assets.xcassets";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -373,6 +402,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmo.dev.huypq.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

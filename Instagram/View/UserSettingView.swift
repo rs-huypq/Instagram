@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct UserSettingView: View {
-    @EnvironmentObject var state: UserStateViewModel
+    @EnvironmentObject var state: LoginViewModel
     
     var body: some View {
         VStack {
             Spacer()
-            Button {
-                Task{
-                    await state.signOut()
-                }
-            } label: {
+            Button {} label: {
                 Text("Log out")
             }
             Spacer()

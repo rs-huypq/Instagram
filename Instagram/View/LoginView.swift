@@ -8,95 +8,59 @@
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var state: UserStateViewModel
-    
-    @State private var email: String = ""
-    @State private var password: String = ""
-    
-    private var imageString: String = "Instagram_logo_white"
+    @ObservedObject private var loginViewModel = LoginViewModel()
     
     var body: some View {
         NavigationView {
-            if (state.isLoading) {
-                ZStack {
-                    LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .top, endPoint: .bottom)
-                        .edgesIgnoringSafeArea(.all)
-                    ProgressView("Logout...")
-                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                        .foregroundColor(.white.opacity(0.8))
-                }
-            } else {
-                VStack(spacing: 20) {
-                    // Logo
-                    Image(imageString).padding(.bottom, 20)
-                    
-                    // Text field for email
-                    IGTextField(placeholder: "Email", type: TypeInput.email, text: $email)
-                    
-                    // Text field for password
-                    IGTextField(placeholder: "Password", type: TypeInput.password, text: $password)
-                    
-                    // Login button
-                    Button(action: {
-                        Task {
-                            await state.signIn(
-                                email: email,
-                                password: password
-                            )
-                        }
-                    }) {
-                        NavigationLink(destination: DashboardView()) {
-                            Text("Log In")
-                                .frame(minWidth: 0, maxWidth: .infinity)
-                                .padding()
-                                .foregroundColor(.white)
-                                .background(.purple.opacity(0.4))
-                                .cornerRadius(12)
-                                .padding(.bottom, 10)
-                        }
-                    }
-                    
-                    // Forgot password button
-                    OtherLoginButton(title: "Forgot your password?", labelButton: "Get help signing in.",
-                                     viewDestination: AnyView(Text("Forgot your password?")))
-                    
-                    Spacer()
-                    
-                    // Sign up button
-                    OtherLoginButton(title: "Don't have an account?", labelButton: "Sign up",
-                                     viewDestination: AnyView(SignUpView()))
-                }
-                .padding()
-                .background(
-                    LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .top, endPoint: .bottom)
-                        .edgesIgnoringSafeArea(.all))
-                .navigationBarHidden(true)
-            }
-        }
-    }
-}
-
-
-
-struct OtherLoginButton: View {
-    var title: String
-    var labelButton: String
-    var viewDestination: AnyView
-    var actionButton: Void? = nil
-    
-    var body: some View {
-        return HStack {
-            Text(title).foregroundColor(.white)
-            Button(action: {
-                actionButton
-            }) {
-                NavigationLink(destination: viewDestination) {
-                    Text(labelButton)
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
+            VStack(spacing: 20) {
+                // Logo
+                Image(AppImages.instagramLogoWhite).padding(.bottom, 20)
+                
+                // Text field for email
+                IGTextField(
+                    placeholder: AppStrings.emailPlaceholderLogin,
+                    message: loginViewModel.emailMessage,
+                    type: TypeInput.email,
+                    text: $loginViewModel.email
+                )
+                
+                // Text field for password
+                IGTextField(
+                    placeholder: AppStrings.passwordPlaceholderLogin,
+                    message: loginViewModel.passwordMessage,
+                    type: TypeInput.password,
+                    text: $loginViewModel.password
+                )
+                
+                // Login button
+                NavigationLink(destination: DashboardView()) {
+                    IGButton(label: AppStrings.loginButton, actionButton: {})
                 }
                 
+                // Forgot password button
+                IGLetterButton(
+                    title: AppStrings.forgotPasswordTitle,
+                    label: AppStrings.forgotPasswordButton,
+                    destination: AnyView(Text("Forgot password")),
+                    actionButton: {}
+                )
+                
+                Spacer()
+                
+                // Sign up button
+                IGLetterButton(
+                    title: AppStrings.signUpTitle,
+                    label: AppStrings.signUpButton,
+                    destination: AnyView(SignUpView()),
+                    actionButton: {}
+                )
+                
             }
+            .padding()
+            .background(
+                LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .top, endPoint: .bottom)
+                    .edgesIgnoringSafeArea(.all))
+            .navigationBarHidden(true)
         }
     }
 }
