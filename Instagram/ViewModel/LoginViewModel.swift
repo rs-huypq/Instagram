@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 @MainActor
 class LoginViewModel: ObservableObject {
@@ -44,6 +45,23 @@ class LoginViewModel: ObservableObject {
             .eraseToAnyPublisher()
     }
     
+    private var isFormValidPublisher: AnyPublisher<Bool, Never> {
+        Publishers.CombineLatest(isEmailValidPublisher, isPasswordValidPublisher)
+            .map { userNameIsValid, passwordIsValid in
+                return userNameIsValid && passwordIsValid
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    func createSession() -> Void {
+        let url = URL(string: AppStrings.loginApi)!
+        
+        AF.request(url, method: .post)
+            .response { response in
+                debugPrint(response)
+            }
+    }
+    
     func _isValidEmail(email: String) -> Bool {
         let emailRegEx = AppStrings.nameEmailValidate + "@" + AppStrings.domainEmailValidate + "[A-Za-z]{2,8}"
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
@@ -75,6 +93,12 @@ class LoginViewModel: ObservableObject {
                 return valid ? "" : AppStrings.emailValid
             }
             .assign(to: \.passwordMessage, on: self)
+            .store(in: &cancellableSet)
+        
+        // Check button
+        isFormValidPublisher
+            .receive(on: RunLoop.main)
+            .assign(to: \.isValid, on: self)
             .store(in: &cancellableSet)
     }
 }

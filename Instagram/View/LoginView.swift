@@ -33,9 +33,13 @@ struct LoginView: View {
                 )
                 
                 // Login button
-                NavigationLink(destination: DashboardView()) {
-                    IGButton(label: AppStrings.loginButton, actionButton: {})
-                }
+                IGButton(
+                    label: AppStrings.loginButton,
+                    actionButton: {
+                        loginViewModel.createSession()
+                    }
+                )
+//                    .disabled(!loginViewModel.isValid)
                 
                 // Forgot password button
                 IGLetterButton(
