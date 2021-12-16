@@ -44,7 +44,7 @@ struct LoginView: View {
                 IGLetterButton(
                     title: AppStrings.forgotPasswordTitle,
                     label: AppStrings.forgotPasswordButton,
-                    destination: AnyView(Text("Forgot password")),
+                    destination: AnyView(Text(AppStrings.forgotPasswordTitle)),
                     actionButton: {}
                 )
                 

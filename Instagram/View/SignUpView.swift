@@ -12,13 +12,13 @@ struct SignUpView: View {
     
     @ObservedObject private var viewModel = SignUpViewModel()
     
+    @State private var image = UIImage(imageLiteralResourceName: AppImages.addPhotoImage)
+    @State private var showSheet = false
+    
     var body: some View {
         VStack (spacing: 16) {
-            
-            Image(AppImages.addPhotoImage)
-                .renderingMode(.template)
-                .foregroundColor(.white)
-                .padding()
+            // Select image button
+            _buildAddImageButton
             
             // Text field for email
             IGTextField(
@@ -75,11 +75,33 @@ struct SignUpView: View {
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
     }
+    
+    var _buildAddImageButton: some View {
+        Image(uiImage: self.image)
+            .resizable()
+            .renderingMode(.template)
+            .foregroundColor(.white)
+            .cornerRadius(50)
+            .frame(width: 150, height: 150)
+            .aspectRatio(contentMode: .fill)
+            .clipShape(Circle())
+            .onTapGesture {
+                showSheet = true
+            }
+            .sheet(isPresented: $showSheet) {
+                // Pick an image from the photo library:
+                ImagePicker(sourceType: .photoLibrary, selectedImage: $image)
+                
+                //  If you wish to take a photo from camera instead:
+                // ImagePicker(sourceType: .camera, selectedImage: self.$image)
+            }
+    }
 }
 
-
+#if DEBUG
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
     }
 }
+#endif
