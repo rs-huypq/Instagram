@@ -15,7 +15,7 @@ struct IGButton: View {
     
     var body: some View {
         Button(action: actionButton) {
-            Text(AppStrings.loginButton)
+            Text(label)
                 .font(.system(size: 16))
         }
         .padding()

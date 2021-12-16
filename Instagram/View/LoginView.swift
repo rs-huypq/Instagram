@@ -38,8 +38,7 @@ struct LoginView: View {
                     actionButton: {
                         loginViewModel.createSession()
                     }
-                )
-//                    .disabled(!loginViewModel.isValid)
+                ).disabled(!loginViewModel.isValid)
                 
                 // Forgot password button
                 IGLetterButton(

@@ -11,4 +11,5 @@ class AppImages {
     
     // MARK: Login screen
     static let instagramLogoWhite = "Instagram_logo_white"
+    static let addPhotoImage = "plus_photo"
 }

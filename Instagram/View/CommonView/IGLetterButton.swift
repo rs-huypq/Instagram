@@ -10,7 +10,8 @@ import SwiftUI
 struct IGLetterButton: View {
     var title: String
     var label: String
-    var destination: AnyView
+    var destination: AnyView?
+    var moveToScreen: Bool = true
     var actionButton: () -> Void
     
     var body: some View {
@@ -22,7 +23,14 @@ struct IGLetterButton: View {
             
             // Button
             Button(action: actionButton) {
-                NavigationLink(destination: destination) {
+                if moveToScreen {
+                    NavigationLink(destination: destination) {
+                        Text(label)
+                            .font(.system(size: 16))
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                    }
+                } else {
                     Text(label)
                         .font(.system(size: 16))
                         .fontWeight(.medium)

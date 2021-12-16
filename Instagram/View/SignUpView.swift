@@ -10,56 +10,65 @@ import SwiftUI
 struct SignUpView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var fullName: String = ""
-    @State private var userName: String = ""
+    @ObservedObject private var viewModel = SignUpViewModel()
     
     var body: some View {
         VStack (spacing: 16) {
             
-            Image("plus_photo")
+            Image(AppImages.addPhotoImage)
                 .renderingMode(.template)
                 .foregroundColor(.white)
                 .padding()
             
             // Text field for email
-            IGTextField(placeholder: "Email", type: TypeInput.email, text: $email)
+            IGTextField(
+                placeholder: AppStrings.emailPlaceholderLogin,
+                message: viewModel.emailMessage,
+                type: TypeInput.email,
+                text: $viewModel.email
+            )
             
             // Text field for password
-            IGTextField(placeholder: "Password", type: TypeInput.password, text: $password)
+            IGTextField(
+                placeholder: AppStrings.passwordPlaceholderLogin,
+                message: viewModel.passwordMessage,
+                type: TypeInput.password,
+                text: $viewModel.password
+            )
             
             // Text field for full name
-            IGTextField(placeholder: "Full name", type: TypeInput.text, text: $fullName)
+            IGTextField(
+                placeholder: AppStrings.fullNamePlaceholderSignUp,
+                message: viewModel.fullNameMessage,
+                type: TypeInput.text,
+                text: $viewModel.fullName
+            )
             
             // Text field for user name
-            IGTextField(placeholder: "User name", type: TypeInput.text, text: $userName)
+            IGTextField(
+                placeholder: AppStrings.userNamePlaceholderSignUp,
+                message: viewModel.userNameMessage,
+                type: TypeInput.text,
+                text: $viewModel.userName
+            )
             
             // Sign Up button
-            Button(action: {}) {
-                Text("Sign Up")
-            }
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .padding()
-            .foregroundColor(.white)
-            .background(.purple.opacity(0.4))
-            .cornerRadius(12)
-            .padding(.bottom, 10)
+            IGButton(
+                label: AppStrings.signUpButton,
+                actionButton: {}
+            ).disabled(!viewModel.isValid)
             
             Spacer()
             
             // Back to Login screen if have an account
-            HStack {
-                Text("Already have an account?").foregroundColor(.white)
-                Button(action: {
+            IGLetterButton(
+                title: AppStrings.questionSignUp,
+                label: AppStrings.signInButton,
+                moveToScreen: false,
+                actionButton: {
                     self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Text("Sign In")
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
                 }
-            }
-            
+            )
         }
         .padding()
         .background(LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))

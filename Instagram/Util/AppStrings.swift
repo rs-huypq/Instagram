@@ -26,6 +26,12 @@ class AppStrings {
     static let signUpButton = "Sign Up"
     static let emailValid = "Email is not Valid"
     static let passwordValid = "Password is not Valid"
+    static let fullNameValid = "Full name is empty"
+    static let userNameValid = "User name is empty"
     
     // MARK: Sign Up screen
+    static let fullNamePlaceholderSignUp = "Full name"
+    static let userNamePlaceholderSignUp = "User name"
+    static let questionSignUp = "Already have an account?"
+    static let signInButton = "Sign In"
 }
