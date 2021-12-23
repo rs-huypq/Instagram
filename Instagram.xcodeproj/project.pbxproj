@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7660FFCC20DD881B6031982F /* libPods-Instagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAA9D28610FB9FC2CCFBBCA /* libPods-Instagram.a */; };
+		BF053DDA27740E4200A07B14 /* IGStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF053DD927740E4200A07B14 /* IGStory.swift */; };
+		BF053DDC27740EF600A07B14 /* IGPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF053DDB27740EF600A07B14 /* IGPost.swift */; };
 		BF32500B27682C300094F875 /* IGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32500A27682C300094F875 /* IGButton.swift */; };
 		BF636FE8275F6D7100FE02DE /* InstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FE7275F6D7100FE02DE /* InstagramApp.swift */; };
 		BF636FEA275F6D7100FE02DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FE9275F6D7100FE02DE /* ContentView.swift */; };
@@ -16,9 +18,12 @@
 		BF7009BE2762FF6C00E9E077 /* IGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009BD2762FF6C00E9E077 /* IGTextField.swift */; };
 		BF7009C22763139600E9E077 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009C12763139600E9E077 /* LoginViewModel.swift */; };
 		BF7009C427632D5800E9E077 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009C327632D5800E9E077 /* UserSettingView.swift */; };
+		BF783A5E2772DFBD008CA070 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF783A5D2772DFBD008CA070 /* HomeViewModel.swift */; };
 		BF94D6E52769890900240970 /* IGLetterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94D6E42769890900240970 /* IGLetterButton.swift */; };
+		BFA01F962772D4B100041A04 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA01F952772D4B100041A04 /* UserModel.swift */; };
 		BFAB77A52769F5850040EEDA /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB77A42769F5850040EEDA /* NetworkModel.swift */; };
 		BFB1EB0C276AF828002FF4AC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1EB0B276AF828002FF4AC /* SignUpViewModel.swift */; };
+		BFC738E4276C332500ABD656 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC738E3276C332500ABD656 /* NetworkManager.swift */; };
 		BFFBB7162761C3670011A91B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7152761C3670011A91B /* HomeView.swift */; };
 		BFFBB7182761E0E80011A91B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB7172761E0E80011A91B /* DashboardView.swift */; };
 		BFFBB71B276206070011A91B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBB71A276206060011A91B /* SignUpView.swift */; };
@@ -31,6 +36,8 @@
 		102E023CDFCE91C5368C284A /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 		1AAA9D28610FB9FC2CCFBBCA /* libPods-Instagram.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Instagram.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25F18B6A0BE03B6E327F184E /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
+		BF053DD927740E4200A07B14 /* IGStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGStory.swift; sourceTree = "<group>"; };
+		BF053DDB27740EF600A07B14 /* IGPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGPost.swift; sourceTree = "<group>"; };
 		BF32500A27682C300094F875 /* IGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGButton.swift; sourceTree = "<group>"; };
 		BF636FE4275F6D7100FE02DE /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF636FE7275F6D7100FE02DE /* InstagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramApp.swift; sourceTree = "<group>"; };
@@ -40,9 +47,12 @@
 		BF7009BD2762FF6C00E9E077 /* IGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextField.swift; sourceTree = "<group>"; };
 		BF7009C12763139600E9E077 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BF7009C327632D5800E9E077 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
+		BF783A5D2772DFBD008CA070 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BF94D6E42769890900240970 /* IGLetterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLetterButton.swift; sourceTree = "<group>"; };
+		BFA01F952772D4B100041A04 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		BFAB77A42769F5850040EEDA /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		BFB1EB0B276AF828002FF4AC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		BFC738E3276C332500ABD656 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BFFBB7152761C3670011A91B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BFFBB7172761E0E80011A91B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		BFFBB71A276206060011A91B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -102,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BFFEBA19276721DB000AD4E2 /* Assets.xcassets */,
+				BFC738E2276C330300ABD656 /* Network */,
 				BF7009B62762EDF200E9E077 /* ViewModel */,
 				BF7009B72762F93B00E9E077 /* Model */,
 				BF7009B52762EDE800E9E077 /* View */,
@@ -139,6 +150,7 @@
 			children = (
 				BF7009C12763139600E9E077 /* LoginViewModel.swift */,
 				BFB1EB0B276AF828002FF4AC /* SignUpViewModel.swift */,
+				BF783A5D2772DFBD008CA070 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -146,6 +158,7 @@
 		BF7009B72762F93B00E9E077 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BFA01F952772D4B100041A04 /* UserModel.swift */,
 				BFAB77A42769F5850040EEDA /* NetworkModel.swift */,
 			);
 			path = Model;
@@ -157,8 +170,18 @@
 				BF7009BD2762FF6C00E9E077 /* IGTextField.swift */,
 				BF32500A27682C300094F875 /* IGButton.swift */,
 				BF94D6E42769890900240970 /* IGLetterButton.swift */,
+				BF053DD927740E4200A07B14 /* IGStory.swift */,
+				BF053DDB27740EF600A07B14 /* IGPost.swift */,
 			);
 			path = CommonView;
+			sourceTree = "<group>";
+		};
+		BFC738E2276C330300ABD656 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BFC738E3276C332500ABD656 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		BFFEBA1B276734FF000AD4E2 /* Util */ = {
@@ -267,12 +290,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF636FF8275F721E00FE02DE /* LoginView.swift in Sources */,
+				BF783A5E2772DFBD008CA070 /* HomeViewModel.swift in Sources */,
 				BFFBB7162761C3670011A91B /* HomeView.swift in Sources */,
 				BFFBB7182761E0E80011A91B /* DashboardView.swift in Sources */,
 				BF636FEA275F6D7100FE02DE /* ContentView.swift in Sources */,
+				BF053DDC27740EF600A07B14 /* IGPost.swift in Sources */,
+				BFC738E4276C332500ABD656 /* NetworkManager.swift in Sources */,
 				BFFEBA1F27674769000AD4E2 /* AppImages.swift in Sources */,
+				BF053DDA27740E4200A07B14 /* IGStory.swift in Sources */,
 				BF32500B27682C300094F875 /* IGButton.swift in Sources */,
 				BF7009BE2762FF6C00E9E077 /* IGTextField.swift in Sources */,
+				BFA01F962772D4B100041A04 /* UserModel.swift in Sources */,
 				BFB1EB0C276AF828002FF4AC /* SignUpViewModel.swift in Sources */,
 				BFFBB71B276206070011A91B /* SignUpView.swift in Sources */,
 				BF94D6E52769890900240970 /* IGLetterButton.swift in Sources */,

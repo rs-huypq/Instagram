@@ -10,6 +10,14 @@ import SwiftUI
 struct LoginView: View {
     @ObservedObject private var loginViewModel = LoginViewModel()
     
+    var buildBackground: some View {
+        LinearGradient(
+            gradient: Gradient(colors: [.purple, .blue]),
+            startPoint: .top,
+            endPoint: .bottom
+        ).edgesIgnoringSafeArea(.all)
+    }
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
@@ -33,12 +41,16 @@ struct LoginView: View {
                 )
                 
                 // Login button
-                IGButton(
-                    label: AppStrings.loginButton,
-                    actionButton: {
-                        loginViewModel.createSession()
-                    }
-                ).disabled(!loginViewModel.isValid)
+                NavigationLink(destination: DashboardView()) {
+                    IGButton(
+                        label: AppStrings.loginButton,
+                        actionButton: {
+                            //                        loginViewModel.createSession()
+                        }
+                    )
+                    //                    .disabled(!loginViewModel.isValid)
+                }
+                
                 
                 // Forgot password button
                 IGLetterButton(
@@ -60,9 +72,7 @@ struct LoginView: View {
                 
             }
             .padding()
-            .background(
-                LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .top, endPoint: .bottom)
-                    .edgesIgnoringSafeArea(.all))
+            .background(buildBackground)
             .navigationBarHidden(true)
         }
     }

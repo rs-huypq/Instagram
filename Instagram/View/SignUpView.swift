@@ -79,7 +79,7 @@ struct SignUpView: View {
     var _buildAddImageButton: some View {
         Image(uiImage: self.image)
             .resizable()
-            .renderingMode(.template)
+            .renderingMode(showSheet ? .original : .template)
             .foregroundColor(.white)
             .cornerRadius(50)
             .frame(width: 150, height: 150)

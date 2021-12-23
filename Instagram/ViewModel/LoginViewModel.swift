@@ -57,6 +57,7 @@ class LoginViewModel: ObservableObject {
         let url = URL(string: AppStrings.loginApi)!
         
         AF.request(url, method: .post)
+            .validate()
             .response { response in
                 debugPrint(response)
             }
