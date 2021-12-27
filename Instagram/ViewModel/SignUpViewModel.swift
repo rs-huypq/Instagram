@@ -82,6 +82,27 @@ class SignUpViewModel: ObservableObject {
         return emailPredicate.evaluate(with: email)
     }
     
+    func createAccount() -> Void {
+        let url = URL(string: AppStrings.apiSignUp)!
+        
+        AF.upload(
+            multipartFormData: { multipart in
+                multipart.append(self.email.data(using: .utf8)!, withName: "email")
+                multipart.append(self.password.data(using: .utf8)!, withName: "password")
+                multipart.append(self.fullName.data(using: .utf8)!, withName: "fullName")
+                multipart.append(self.userName.data(using: .utf8)!, withName: "userName")
+            }, to: url)
+            .responseDecodable(of: ResultLogin.self) { response in
+                switch response.result {
+                case .success(let value):
+                    debugPrint(value)
+                case .failure(_):
+                    debugPrint("FAILED")
+                }
+            }
+    }
+
+    
     init() {
         // Initial email validate
         isEmailValidPublisher

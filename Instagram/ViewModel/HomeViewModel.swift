@@ -39,7 +39,7 @@ class HomeViewModel: ObservableObject {
             UserModel(name: "Khoa Pug", avatar: "thor", like: Int.random(in: 0..<1000), status: "30 tỷ với tôi chỉ là rác..."),
             UserModel(name: "Vuong Pham", avatar: "caption", like: Int.random(in: 0..<1000), status: "Tôi làm gì có tiền mua máy bay"),
             UserModel(name: "Peter Parker", avatar: "spider-man", like: Int.random(in: 0..<1000), status: "Dì May cần tìm chồng, liên hệ Nhện Nhọ"),
-            UserModel(name: "John", avatar: "hulk", like: Int.random(in: 0..<1000), status: "Cần mọi người tư vấn cho mình chỗ mua quần áo ở Hà Nội"),
+            UserModel(name: "John", avatar: "hulk", like: Int.random(in: 0..<1000), status: "Khoan cắt bê-tông, xin gọi..."),
             UserModel(name: "Black", avatar: "venom-7", like: Int.random(in: 0..<1000), status: "Nhện đâu ??")
         ])
         

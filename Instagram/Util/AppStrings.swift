@@ -10,7 +10,8 @@ import Foundation
 class AppStrings {
     
     // MARK: API
-    static let loginApi = "https://run.mocky.io/v3/603ceccd-84fc-4d0d-89a3-f40140e729f4"
+    static let apiLogin = "https://run.mocky.io/v3/603ceccd-84fc-4d0d-89a3-f40140e729f4"
+    static let apiSignUp = "https://run.mocky.io/v3/255afa3f-ffb8-4d97-8bc2-2dc397d611dc"
     
     // MARK: Validate
     static let nameEmailValidate = "[A-Z0-9a-z]([A-Z0-9a-z._%+-]{0,30}[A-Z0-9a-z])?"

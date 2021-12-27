@@ -11,6 +11,13 @@
 
 import Foundation
 
+typealias ResultLogin = [String: ResultItem]
+
+struct ResultItem: Decodable  {
+    var errorCode: Int
+    var message: String
+}
+
 // MARK: - Network
 struct Network: Codable {
     let info: Info
