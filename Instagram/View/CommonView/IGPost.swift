@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct IGPost: View {
+    @ObservedObject private var homeViewModel = HomeViewModel()
+    
     var users: [UserModel] = [UserModel]()
     
     var body: some View {
@@ -24,7 +26,7 @@ struct IGPost: View {
                     
                     Group {
                         // Action for Post: Like, Comment, Send and Flag
-                        _buildAction()
+                        _buildAction(viewModel: homeViewModel)
                         
                         // Like count
                         _buildCountLike(like: user.like)
@@ -37,82 +39,88 @@ struct IGPost: View {
             }
         }
     }
-}
-
-func _buildAvatarAndName(avatar: String, name: String) -> some View {
-    return HStack {
-        Image(avatar)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 32, height: 32)
-            .clipShape(Circle())
-            .overlay(Circle().stroke(.purple, lineWidth: 2))
-        
-        Text(name)
-            .font(.system(size: 16))
-            .fontWeight(.medium)
-        
-        Spacer()
-        
-        Button(action: {}){
-            Image(systemName: "line.3.horizontal")
+    
+    func _buildAvatarAndName(avatar: String, name: String) -> some View {
+        return HStack {
+            Image(avatar)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 18, height: 18)
-                .foregroundColor(.black.opacity(0.8))
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 32, height: 32)
+                .clipShape(Circle())
+                .overlay(Circle().stroke(.purple, lineWidth: 2))
+            
+            Text(name)
+                .font(.system(size: 16))
+                .fontWeight(.medium)
+            
+            Spacer()
+            
+            Button(action: {}){
+                Image(systemName: "line.3.horizontal")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 18, height: 18)
+                    .foregroundColor(.black.opacity(0.8))
+            }
+            
         }
-        
+        .padding(.top, 8)
+        .padding(.horizontal, 12)
     }
-    .padding(.top, 8)
-    .padding(.horizontal, 12)
-}
-
-func _buildAction() -> some View {
-    return HStack(spacing: 18) {
-        Button(action: {}){
-            _buildIcon(iconName: "heart")
-        }
-        Button(action: {}){
-            _buildIcon(iconName: "message")
-        }
-        Button(action: {}){
-            _buildIcon(iconName: "paperplane")
-        }
-        
-        Spacer()
-        
-        Button(action: {}){
-            _buildIcon(iconName: "bookmark")
+    
+    func _buildAction(viewModel: HomeViewModel) -> some View {
+        return HStack(spacing: 18) {
+            Button(action: {
+                viewModel.like()
+            }){
+                _buildIcon(
+                    iconName: viewModel.liked ? "heart.fill" : "heart",
+                    color: viewModel.liked ? .red.opacity(0.8) : .black.opacity(0.8)
+                )
+            }
+            Button(action: {}){
+                _buildIcon(iconName: "message")
+            }
+            Button(action: {}){
+                _buildIcon(iconName: "paperplane")
+            }
+            
+            Spacer()
+            
+            Button(action: {}){
+                _buildIcon(iconName: "bookmark")
+            }
         }
     }
-}
-
-func _buildIcon(iconName: String) -> some View {
-    return Image(systemName: iconName)
-        .resizable()
-        .aspectRatio(contentMode: .fit)
-        .frame(width: 24, height: 24)
-        .foregroundColor(.black.opacity(0.8))
-}
-
-func _buildCountLike(like: Int) -> some View {
-    return HStack(spacing: 4) {
-        Text("\(like)")
-            .fontWeight(.medium)
-            .font(.system(size: 14))
-        Text("lượt thích")
-            .fontWeight(.medium)
-            .font(.system(size: 14))
+    
+    func _buildIcon(iconName: String, color: Color = .black.opacity(0.8)) -> some View {
+        return Image(systemName: iconName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 24, height: 24)
+            .foregroundColor(color)
     }
-}
-
-func _buildContent(name: String, content: String) -> some View {
-    return HStack(spacing: 4) {
-        Text(name)
-            .fontWeight(.medium)
-            .font(.system(size: 14))
-        Text(content)
-            .fontWeight(.thin)
-            .font(.system(size: 14))
+    
+    func _buildCountLike(like: Int) -> some View {
+        return HStack(spacing: 4) {
+            Text("\(like)")
+                .fontWeight(.medium)
+                .font(.system(size: 14))
+            Text("lượt thích")
+                .fontWeight(.medium)
+                .font(.system(size: 14))
+        }
     }
+    
+    func _buildContent(name: String, content: String) -> some View {
+        return HStack(spacing: 4) {
+            Text(name)
+                .fontWeight(.medium)
+                .font(.system(size: 14))
+            Text(content)
+                .fontWeight(.thin)
+                .font(.system(size: 14))
+        }
+    }
+    
 }
