@@ -20,60 +20,61 @@ struct LoginView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
-                // Logo
-                Image(AppImages.instagramLogoWhite).padding(.bottom, 20)
-                
-                // Text field for email
-                IGTextField(
-                    placeholder: AppStrings.emailPlaceholderLogin,
-                    message: loginViewModel.emailMessage,
-                    type: TypeInput.email,
-                    text: $loginViewModel.email
-                )
-                
-                // Text field for password
-                IGTextField(
-                    placeholder: AppStrings.passwordPlaceholderLogin,
-                    message: loginViewModel.passwordMessage,
-                    type: TypeInput.password,
-                    text: $loginViewModel.password
-                )
-                
-                // Login button
-                NavigationLink(destination: DashboardView()) {
+            LoadingView(isShowing: $loginViewModel.isLoading) {
+                VStack(spacing: 20) {
+                    // Logo
+                    Image(AppImages.instagramLogoWhite).padding(.bottom, 20)
+                    
+                    // Text field for email
+                    IGTextField(
+                        placeholder: AppStrings.emailPlaceholderLogin,
+                        message: loginViewModel.emailMessage,
+                        type: TypeInput.email,
+                        text: $loginViewModel.email
+                    )
+                    
+                    // Text field for password
+                    IGTextField(
+                        placeholder: AppStrings.passwordPlaceholderLogin,
+                        message: loginViewModel.passwordMessage,
+                        type: TypeInput.password,
+                        text: $loginViewModel.password
+                    )
+                    
+                    // Login button
                     IGButton(
                         label: AppStrings.loginButton,
                         actionButton: {
-                            //                        loginViewModel.createSession()
-                        }
+                            loginViewModel.createSession()
+                        },
+                        disable: !loginViewModel.isValid,
+                        destinationView: AnyView(DashboardView()),
+                        isActiveNavigate: $loginViewModel.isSuccess
                     )
-                    //                    .disabled(!loginViewModel.isValid)
+                    
+                    // Forgot password button
+                    IGLetterButton(
+                        title: AppStrings.forgotPasswordTitle,
+                        label: AppStrings.forgotPasswordButton,
+                        destination: AnyView(Text(AppStrings.forgotPasswordTitle)),
+                        actionButton: {}
+                    )
+                    
+                    Spacer()
+                    
+                    // Sign up button
+                    IGLetterButton(
+                        title: AppStrings.signUpTitle,
+                        label: AppStrings.signUpButton,
+                        destination: AnyView(SignUpView()),
+                        actionButton: {}
+                    )
+                    
                 }
-                
-                
-                // Forgot password button
-                IGLetterButton(
-                    title: AppStrings.forgotPasswordTitle,
-                    label: AppStrings.forgotPasswordButton,
-                    destination: AnyView(Text(AppStrings.forgotPasswordTitle)),
-                    actionButton: {}
-                )
-                
-                Spacer()
-                
-                // Sign up button
-                IGLetterButton(
-                    title: AppStrings.signUpTitle,
-                    label: AppStrings.signUpButton,
-                    destination: AnyView(SignUpView()),
-                    actionButton: {}
-                )
-                
+                .padding()
+                .background(buildBackground)
+                .navigationBarHidden(true)
             }
-            .padding()
-            .background(buildBackground)
-            .navigationBarHidden(true)
         }
     }
 }

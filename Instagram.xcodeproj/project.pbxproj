@@ -21,6 +21,7 @@
 		BF783A5E2772DFBD008CA070 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF783A5D2772DFBD008CA070 /* HomeViewModel.swift */; };
 		BF94D6E52769890900240970 /* IGLetterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94D6E42769890900240970 /* IGLetterButton.swift */; };
 		BFA01F962772D4B100041A04 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA01F952772D4B100041A04 /* UserModel.swift */; };
+		BFA496B9277994EF0071B5F7 /* IGLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA496B8277994EF0071B5F7 /* IGLoading.swift */; };
 		BFAB77A52769F5850040EEDA /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB77A42769F5850040EEDA /* NetworkModel.swift */; };
 		BFB1EB0C276AF828002FF4AC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1EB0B276AF828002FF4AC /* SignUpViewModel.swift */; };
 		BFC738E4276C332500ABD656 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC738E3276C332500ABD656 /* NetworkManager.swift */; };
@@ -50,6 +51,7 @@
 		BF783A5D2772DFBD008CA070 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BF94D6E42769890900240970 /* IGLetterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLetterButton.swift; sourceTree = "<group>"; };
 		BFA01F952772D4B100041A04 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BFA496B8277994EF0071B5F7 /* IGLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLoading.swift; sourceTree = "<group>"; };
 		BFAB77A42769F5850040EEDA /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		BFB1EB0B276AF828002FF4AC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		BFC738E3276C332500ABD656 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				BF7009B62762EDF200E9E077 /* ViewModel */,
 				BF7009B72762F93B00E9E077 /* Model */,
 				BF7009B52762EDE800E9E077 /* View */,
+				BF7009B82762F98A00E9E077 /* CommonView */,
 				BFFEBA1B276734FF000AD4E2 /* Util */,
 				BF636FE7275F6D7100FE02DE /* InstagramApp.swift */,
 				BF636FED275F6D7300FE02DE /* Preview Content */,
@@ -134,7 +137,6 @@
 		BF7009B52762EDE800E9E077 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BF7009B82762F98A00E9E077 /* CommonView */,
 				BF636FE9275F6D7100FE02DE /* SearchView.swift */,
 				BFFBB71A276206060011A91B /* SignUpView.swift */,
 				BFFBB7152761C3670011A91B /* HomeView.swift */,
@@ -172,6 +174,7 @@
 				BF94D6E42769890900240970 /* IGLetterButton.swift */,
 				BF053DD927740E4200A07B14 /* IGStory.swift */,
 				BF053DDB27740EF600A07B14 /* IGItemPost.swift */,
+				BFA496B8277994EF0071B5F7 /* IGLoading.swift */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				BF053DDA27740E4200A07B14 /* IGStory.swift in Sources */,
 				BF32500B27682C300094F875 /* IGButton.swift in Sources */,
 				BF7009BE2762FF6C00E9E077 /* IGTextField.swift in Sources */,
+				BFA496B9277994EF0071B5F7 /* IGLoading.swift in Sources */,
 				BFA01F962772D4B100041A04 /* UserModel.swift in Sources */,
 				BFB1EB0C276AF828002FF4AC /* SignUpViewModel.swift in Sources */,
 				BFFBB71B276206070011A91B /* SignUpView.swift in Sources */,

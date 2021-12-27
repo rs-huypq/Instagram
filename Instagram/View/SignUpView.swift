@@ -55,8 +55,13 @@ struct SignUpView: View {
             // Sign Up button
             IGButton(
                 label: AppStrings.signUpButton,
-                actionButton: {}
-            ).disabled(!viewModel.isValid)
+                actionButton: {
+                    viewModel.createAccount()
+                },
+                disable: !viewModel.isValid,
+                destinationView: AnyView(DashboardView()),
+                isActiveNavigate: $viewModel.isSuccess
+            )
             
             Spacer()
             

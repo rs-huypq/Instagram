@@ -16,12 +16,12 @@ class LoginViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var isLoading = false
-    @Published var isLoggedIn = false
     
     // Output
     @Published var emailMessage = ""
     @Published var passwordMessage = ""
     @Published var isValid = false
+    @Published var isSuccess = false
     
     private var cancellableSet: Set<AnyCancellable> = []
     
@@ -54,6 +54,7 @@ class LoginViewModel: ObservableObject {
     }
     
     func createSession() -> Void {
+        self.isLoading = true
         let url = URL(string: AppStrings.apiLogin)!
         
         AF.upload(
@@ -65,8 +66,12 @@ class LoginViewModel: ObservableObject {
                 switch response.result {
                 case .success(let value):
                     debugPrint(value)
+                    self.isSuccess = true
+                    self.isLoading = false
                 case .failure(_):
                     debugPrint("FAILED")
+                    self.isSuccess = false
+                    self.isLoading = false
                 }
             }
     }

@@ -25,6 +25,7 @@ class SignUpViewModel: ObservableObject {
     @Published var fullNameMessage = ""
     @Published var userNameMessage = ""
     @Published var isValid = false
+    @Published var isSuccess = false
     
     private var cancellableSet: Set<AnyCancellable> = []
     
@@ -96,8 +97,10 @@ class SignUpViewModel: ObservableObject {
                 switch response.result {
                 case .success(let value):
                     debugPrint(value)
+                    self.isSuccess = true
                 case .failure(_):
                     debugPrint("FAILED")
+                    self.isSuccess = false
                 }
             }
     }
