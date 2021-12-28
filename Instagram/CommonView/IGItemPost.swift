@@ -13,30 +13,32 @@ struct IGPost: View {
     var users: [UserModel] = [UserModel]()
     
     var body: some View {
-        ScrollView {
-            ForEach(users) { user in
-                VStack(alignment: .leading) {
-                    // Avatar, name and option post
-                    _buildAvatarAndName(avatar: user.avatar, name: user.name)
+        ForEach(users) { user in
+            VStack(alignment: .leading) {
+                // Avatar, name and option post
+                _buildAvatarAndName(avatar: user.avatar, name: user.name)
+                
+                // Image
+                Image(user.photo.name)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                
+                Group {
+                    // Action for Post: Like, Comment, Send and Flag
+                    _buildAction(viewModel: homeViewModel)
                     
-                    // Image
-                    Image(user.avatar)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
+                    // Like count
+                    _buildCountLike(like: user.like)
                     
-                    Group {
-                        // Action for Post: Like, Comment, Send and Flag
-                        _buildAction(viewModel: homeViewModel)
-                        
-                        // Like count
-                        _buildCountLike(like: user.like)
-                        
-                        // Content
-                        _buildContent(name: user.name, content: user.status)
-                    }.padding(.horizontal, 12)
+                    // Content
+                    _buildContent(name: user.name, content: user.status)
+                    
+                    // Time
+                    _buildTimePost()
                 }
-                .padding(.bottom, 24)
+                .padding(.horizontal, 12)
             }
+            .padding(.bottom, 24)
         }
     }
     
@@ -56,7 +58,7 @@ struct IGPost: View {
             Spacer()
             
             Button(action: {}){
-                Image(systemName: "line.3.horizontal")
+                Image(AppImages.more)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 18, height: 18)
@@ -74,21 +76,21 @@ struct IGPost: View {
                 viewModel.like()
             }){
                 _buildIcon(
-                    iconName: viewModel.liked ? "heart.fill" : "heart",
+                    iconName: viewModel.liked ? AppImages.heartFill : AppImages.heart,
                     color: viewModel.liked ? .red.opacity(0.8) : .black.opacity(0.8)
                 )
             }
             Button(action: {}){
-                _buildIcon(iconName: "message")
+                _buildIcon(iconName: AppImages.bubbleChat)
             }
             Button(action: {}){
-                _buildIcon(iconName: "paperplane")
+                _buildIcon(iconName: AppImages.paperplane)
             }
             
             Spacer()
             
             Button(action: {}){
-                _buildIcon(iconName: "bookmark")
+                _buildIcon(iconName: AppImages.bookmark)
             }
         }
     }
@@ -121,6 +123,12 @@ struct IGPost: View {
                 .fontWeight(.thin)
                 .font(.system(size: 14))
         }
+        .padding(.bottom, 4)
     }
     
+    func _buildTimePost() -> some View {
+        return Text("30 phút trước")
+            .fontWeight(.thin)
+            .font(.system(size: 12))
+    }
 }

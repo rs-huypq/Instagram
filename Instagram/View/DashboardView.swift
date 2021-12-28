@@ -10,40 +10,23 @@ import SwiftUI
 struct DashboardView: View {
     @State var selectedIndex = 0
     
-    let tabBarImage = ["home_selected", "search_selected", "like_selected", "profile_selected"]
+    let tabBarImage = [AppImages.homeSelected, AppImages.search, AppImages.videoSelected, AppImages.heartFill, AppImages.userSelected]
     
-    let tabBarImageUnSelected = ["home_unselected", "search_unselected", "like_unselected", "profile_unselected"]
+    let tabBarImageUnSelected = [AppImages.home, AppImages.search, AppImages.video, AppImages.heart, AppImages.user]
     
     var body: some View {
         VStack(spacing: 0) {
-            HStack (spacing: 18) {
-                
-                Image("Instagram_logo_white")
-                    .resizable()
-                    .renderingMode(.template)
-                    .foregroundColor(.black)
-                    .frame(width: 120, height: 40)
-                
-                Spacer()
-                
-                Image(systemName: "plus.app").resizable().frame(width: 22.0, height: 22.0)
-                
-                Image(systemName: "paperplane.fill").resizable().frame(width: 22.0, height: 22.0)
-            }
-            .padding(.horizontal, 16)
-            
-            // Divider
-            Divider()
-            
             ZStack {
                 switch selectedIndex {
                 case 0:
                     HomeView()
                 case 1:
-                    Color.blue.opacity(0.5).edgesIgnoringSafeArea(.top)
+                    SearchView()
                 case 2:
-                    Color.orange.opacity(0.5).edgesIgnoringSafeArea(.top)
+                    Color.white.opacity(0.5).edgesIgnoringSafeArea(.top)
                 case 3:
+                    Color.white.opacity(0.5).edgesIgnoringSafeArea(.top)
+                case 4:
                     UserSettingView()
 
                 default:
@@ -57,16 +40,18 @@ struct DashboardView: View {
             
             // Dashboard view
             HStack {
-                ForEach (0..<4) { num in
+                ForEach (0..<5) { num in
                     Button (action: {
                         selectedIndex = num
                     }, label: {
                         Spacer()
                         
                         if num == selectedIndex {
-                            Image(tabBarImage[num])
+                            Image(systemName: tabBarImage[num])
+                                .foregroundColor(.black)
                         } else {
-                            Image(tabBarImageUnSelected[num])
+                            Image(systemName: tabBarImageUnSelected[num])
+                                .foregroundColor(.gray)
                         }
                         
                         Spacer()
@@ -77,11 +62,5 @@ struct DashboardView: View {
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
-    }
-}
-
-struct DashboardView_Previews: PreviewProvider {
-    static var previews: some View {
-        DashboardView()
     }
 }

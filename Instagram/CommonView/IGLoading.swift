@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoadingView<Content>: View where Content: View {
     @Binding var isShowing: Bool
+    var color: Color = .white
     var content: () -> Content
 
     var body: some View {
@@ -20,7 +21,7 @@ struct LoadingView<Content>: View where Content: View {
 
             // Loading view
             ProgressView()
-                .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                .progressViewStyle(CircularProgressViewStyle(tint: color))
                 .opacity(self.isShowing ? 1 : 0)
         }
     }

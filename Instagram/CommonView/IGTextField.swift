@@ -17,6 +17,12 @@ struct IGTextField: View {
     var placeholder: String
     var message: String = ""
     var type: TypeInput = TypeInput.text
+    var placeHolderColor: Color = .white.opacity(0.8)
+    var background: Color = .white.opacity(0.2)
+    var foreground: Color = .white
+    var cornerRadius: CGFloat = 0
+    var padding: EdgeInsets = EdgeInsets(top: 14, leading: 14, bottom: 14, trailing: 14)
+    var leading: Image? = nil
     
     @Binding var text: String
     
@@ -24,9 +30,12 @@ struct IGTextField: View {
         VStack(alignment: .leading) {
             ZStack(alignment: .leading) {
                 if text.isEmpty {
-                    Text(placeholder)
-                        .foregroundColor(.white.opacity(0.8))
-                        .padding(.leading)
+                    HStack(spacing: 16) {
+                        leading
+                        Text(placeholder)
+                            .foregroundColor(placeHolderColor)
+                    }
+                    .padding(.leading)
                 }
                 
                 if type == .password {
@@ -34,7 +43,7 @@ struct IGTextField: View {
                         "",
                         text: $text
                     )
-                        .padding()
+                        .padding(padding)
                         .colorMultiply(.white)
                         .background(.white.opacity(0.2))
                         .foregroundColor(.white)
@@ -47,18 +56,19 @@ struct IGTextField: View {
                         .keyboardType(.emailAddress)
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
-                        .padding()
+                        .padding(padding)
                         .colorMultiply(.white)
-                        .background(.white.opacity(0.2))
-                        .foregroundColor(.white)
-                        .accentColor(.white)
+                        .background(background)
+                        .foregroundColor(foreground)
+                        .accentColor(foreground)
+                        .cornerRadius(cornerRadius)
                 }
             }
             
             // Show valid
             Text(message)
                 .font(.system(size: 16))
-                .foregroundColor(.red)
+                .foregroundColor(.yellow)
         }
     }
 }

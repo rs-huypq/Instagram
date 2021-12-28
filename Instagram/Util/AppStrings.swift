@@ -35,4 +35,7 @@ class AppStrings {
     static let userNamePlaceholderSignUp = "User name"
     static let questionSignUp = "Already have an account?"
     static let signInButton = "Sign In"
+    
+    // MARK: Search
+    static let searchPlaceHolder = "Search"
 }

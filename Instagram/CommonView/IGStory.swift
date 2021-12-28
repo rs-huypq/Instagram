@@ -18,7 +18,7 @@ struct IGStory: View {
                         Image(user.avatar)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 68, height: 68)
+                            .frame(width: 62, height: 62)
                             .clipShape(Circle())
                             .overlay(Circle().stroke(
                                 LinearGradient(
@@ -32,7 +32,7 @@ struct IGStory: View {
                         
                         Text(user.name)
                             .fontWeight(.regular)
-                            .font(.system(size: 14))
+                            .font(.system(size: 12))
                     }
                 }
             }

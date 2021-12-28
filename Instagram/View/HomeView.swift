@@ -12,10 +12,31 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            _buildStory(users: homeViewModel.listUser)
-            _buildPosts(users: homeViewModel.listUser)
+            _buildTopHome()
+            ScrollView {
+                _buildStory(users: homeViewModel.listUser)
+                Divider()
+                _buildPosts(users: homeViewModel.listUser)
+            }
         }
     }
+}
+
+func _buildTopHome() -> some View {
+    return HStack (spacing: 18) {
+        Image(AppImages.instagramLogoWhite)
+            .resizable()
+            .renderingMode(.template)
+            .foregroundColor(.black)
+            .frame(width: 120, height: 40)
+        
+        Spacer()
+        
+        Image(systemName: AppImages.plus).resizable().frame(width: 22.0, height: 22.0)
+        
+        Image(systemName: AppImages.paperplane).resizable().frame(width: 22.0, height: 22.0)
+    }
+    .padding(.horizontal, 16)
 }
 
 func _buildStory(users: [UserModel]) -> some View {
