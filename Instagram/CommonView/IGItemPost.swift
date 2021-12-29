@@ -34,7 +34,7 @@ struct IGPost: View {
                     _buildContent(name: user.name, content: user.status)
                     
                     // Time
-                    _buildTimePost()
+                    _buildTimePost(time: user.time)
                 }
                 .padding(.horizontal, 12)
             }
@@ -108,7 +108,7 @@ struct IGPost: View {
             Text("\(like)")
                 .fontWeight(.medium)
                 .font(.system(size: 14))
-            Text("lượt thích")
+            Text("liked")
                 .fontWeight(.medium)
                 .font(.system(size: 14))
         }
@@ -126,8 +126,8 @@ struct IGPost: View {
         .padding(.bottom, 4)
     }
     
-    func _buildTimePost() -> some View {
-        return Text("30 phút trước")
+    func _buildTimePost(time: Int) -> some View {
+        return Text("\(time) hours ago")
             .fontWeight(.thin)
             .font(.system(size: 12))
     }

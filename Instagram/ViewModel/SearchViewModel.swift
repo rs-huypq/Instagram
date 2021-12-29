@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import SwiftUI
 
 class SearchViewModel: ObservableObject {
     @Published var search = ""

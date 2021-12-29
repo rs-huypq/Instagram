@@ -38,4 +38,7 @@ class AppStrings {
     
     // MARK: Search
     static let searchPlaceHolder = "Search"
+    
+    // MARK: Activity
+    static let activity = "Activity"
 }

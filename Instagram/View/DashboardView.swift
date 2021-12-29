@@ -16,23 +16,21 @@ struct DashboardView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            ZStack {
-                switch selectedIndex {
-                case 0:
-                    HomeView()
-                case 1:
-                    SearchView()
-                case 2:
-                    Color.white.opacity(0.5).edgesIgnoringSafeArea(.top)
-                case 3:
-                    Color.white.opacity(0.5).edgesIgnoringSafeArea(.top)
-                case 4:
-                    UserSettingView()
-
-                default:
-                    Color.white.edgesIgnoringSafeArea(.top)
-
-                }
+            switch selectedIndex {
+            case 0:
+                HomeView()
+            case 1:
+                SearchView()
+            case 2:
+                VideoView()
+            case 3:
+                ActivityView()
+            case 4:
+                UserSettingView()
+                
+            default:
+                Color.white.edgesIgnoringSafeArea(.top)
+                
             }
             
             // Divider
@@ -45,7 +43,7 @@ struct DashboardView: View {
                         selectedIndex = num
                     }, label: {
                         Spacer()
-                        
+
                         if num == selectedIndex {
                             Image(systemName: tabBarImage[num])
                                 .foregroundColor(.black)
@@ -53,7 +51,7 @@ struct DashboardView: View {
                             Image(systemName: tabBarImageUnSelected[num])
                                 .foregroundColor(.gray)
                         }
-                        
+
                         Spacer()
                     })
                 }

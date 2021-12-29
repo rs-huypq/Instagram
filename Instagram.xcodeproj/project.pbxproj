@@ -10,6 +10,12 @@
 		7660FFCC20DD881B6031982F /* libPods-Instagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAA9D28610FB9FC2CCFBBCA /* libPods-Instagram.a */; };
 		BF053DDA27740E4200A07B14 /* IGStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF053DD927740E4200A07B14 /* IGStory.swift */; };
 		BF053DDC27740EF600A07B14 /* IGItemPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF053DDB27740EF600A07B14 /* IGItemPost.swift */; };
+		BF293262277C3ED400ECBAD1 /* video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF29325C277C3ED300ECBAD1 /* video2.mp4 */; };
+		BF293263277C3ED400ECBAD1 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF29325D277C3ED300ECBAD1 /* video1.mp4 */; };
+		BF293266277C5CFE00ECBAD1 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF293265277C5CFE00ECBAD1 /* ActivityView.swift */; };
+		BF293269277C5E7100ECBAD1 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF293268277C5E7100ECBAD1 /* ActivityModel.swift */; };
+		BF29326B277C5FE300ECBAD1 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF29326A277C5FE300ECBAD1 /* ActivityViewModel.swift */; };
+		BF29326D277C606C00ECBAD1 /* IGItemActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF29326C277C606C00ECBAD1 /* IGItemActivity.swift */; };
 		BF32500B27682C300094F875 /* IGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF32500A27682C300094F875 /* IGButton.swift */; };
 		BF636FE8275F6D7100FE02DE /* InstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FE7275F6D7100FE02DE /* InstagramApp.swift */; };
 		BF636FEA275F6D7100FE02DE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FE9275F6D7100FE02DE /* SearchView.swift */; };
@@ -17,8 +23,12 @@
 		BF636FF8275F721E00FE02DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636FF7275F721E00FE02DE /* LoginView.swift */; };
 		BF7009BE2762FF6C00E9E077 /* IGTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009BD2762FF6C00E9E077 /* IGTextField.swift */; };
 		BF7009C22763139600E9E077 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009C12763139600E9E077 /* LoginViewModel.swift */; };
-		BF7009C427632D5800E9E077 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009C327632D5800E9E077 /* UserSettingView.swift */; };
+		BF7009C427632D5800E9E077 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7009C327632D5800E9E077 /* ProfileView.swift */; };
 		BF783A5E2772DFBD008CA070 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF783A5D2772DFBD008CA070 /* HomeViewModel.swift */; };
+		BF7B194E277B601B0057B91C /* IGItemVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B194D277B601B0057B91C /* IGItemVideo.swift */; };
+		BF7B1950277B61870057B91C /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B194F277B61870057B91C /* VideoView.swift */; };
+		BF7B1952277B62670057B91C /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B1951277B62670057B91C /* VideoViewModel.swift */; };
+		BF7B1954277B62760057B91C /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B1953277B62760057B91C /* VideoModel.swift */; };
 		BF94D6E52769890900240970 /* IGLetterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94D6E42769890900240970 /* IGLetterButton.swift */; };
 		BFA01F962772D4B100041A04 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA01F952772D4B100041A04 /* UserModel.swift */; };
 		BFA496B9277994EF0071B5F7 /* IGLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA496B8277994EF0071B5F7 /* IGLoading.swift */; };
@@ -41,6 +51,12 @@
 		25F18B6A0BE03B6E327F184E /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		BF053DD927740E4200A07B14 /* IGStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGStory.swift; sourceTree = "<group>"; };
 		BF053DDB27740EF600A07B14 /* IGItemPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGItemPost.swift; sourceTree = "<group>"; };
+		BF29325C277C3ED300ECBAD1 /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
+		BF29325D277C3ED300ECBAD1 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		BF293265277C5CFE00ECBAD1 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		BF293268277C5E7100ECBAD1 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		BF29326A277C5FE300ECBAD1 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
+		BF29326C277C606C00ECBAD1 /* IGItemActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGItemActivity.swift; sourceTree = "<group>"; };
 		BF32500A27682C300094F875 /* IGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGButton.swift; sourceTree = "<group>"; };
 		BF636FE4275F6D7100FE02DE /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF636FE7275F6D7100FE02DE /* InstagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramApp.swift; sourceTree = "<group>"; };
@@ -49,8 +65,12 @@
 		BF636FF7275F721E00FE02DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BF7009BD2762FF6C00E9E077 /* IGTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextField.swift; sourceTree = "<group>"; };
 		BF7009C12763139600E9E077 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		BF7009C327632D5800E9E077 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
+		BF7009C327632D5800E9E077 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BF783A5D2772DFBD008CA070 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		BF7B194D277B601B0057B91C /* IGItemVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGItemVideo.swift; sourceTree = "<group>"; };
+		BF7B194F277B61870057B91C /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		BF7B1951277B62670057B91C /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
+		BF7B1953277B62760057B91C /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		BF94D6E42769890900240970 /* IGLetterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLetterButton.swift; sourceTree = "<group>"; };
 		BFA01F952772D4B100041A04 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		BFA496B8277994EF0071B5F7 /* IGLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLoading.swift; sourceTree = "<group>"; };
@@ -99,6 +119,8 @@
 		BF636FDB275F6D7100FE02DE = {
 			isa = PBXGroup;
 			children = (
+				BF29325D277C3ED300ECBAD1 /* video1.mp4 */,
+				BF29325C277C3ED300ECBAD1 /* video2.mp4 */,
 				BF636FE6275F6D7100FE02DE /* Instagram */,
 				BF636FE5275F6D7100FE02DE /* Products */,
 				60B49D03810DFBB25D41FFB9 /* Pods */,
@@ -146,7 +168,9 @@
 				BFFBB7172761E0E80011A91B /* DashboardView.swift */,
 				BFFBB7152761C3670011A91B /* HomeView.swift */,
 				BF636FE9275F6D7100FE02DE /* SearchView.swift */,
-				BF7009C327632D5800E9E077 /* UserSettingView.swift */,
+				BF7B194F277B61870057B91C /* VideoView.swift */,
+				BF293265277C5CFE00ECBAD1 /* ActivityView.swift */,
+				BF7009C327632D5800E9E077 /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +182,8 @@
 				BFB1EB0B276AF828002FF4AC /* SignUpViewModel.swift */,
 				BF783A5D2772DFBD008CA070 /* HomeViewModel.swift */,
 				BFBA7A34277B1109004023D3 /* SearchViewModel.swift */,
+				BF7B1951277B62670057B91C /* VideoViewModel.swift */,
+				BF29326A277C5FE300ECBAD1 /* ActivityViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -168,6 +194,8 @@
 				BFA01F952772D4B100041A04 /* UserModel.swift */,
 				BFAB77A42769F5850040EEDA /* NetworkModel.swift */,
 				BFE04C37277B1EF200D8CFAB /* PhotoModel.swift */,
+				BF7B1953277B62760057B91C /* VideoModel.swift */,
+				BF293268277C5E7100ECBAD1 /* ActivityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,12 +203,14 @@
 		BF7009B82762F98A00E9E077 /* CommonView */ = {
 			isa = PBXGroup;
 			children = (
+				BFA496B8277994EF0071B5F7 /* IGLoading.swift */,
 				BF7009BD2762FF6C00E9E077 /* IGTextField.swift */,
 				BF32500A27682C300094F875 /* IGButton.swift */,
 				BF94D6E42769890900240970 /* IGLetterButton.swift */,
 				BF053DD927740E4200A07B14 /* IGStory.swift */,
 				BF053DDB27740EF600A07B14 /* IGItemPost.swift */,
-				BFA496B8277994EF0071B5F7 /* IGLoading.swift */,
+				BF7B194D277B601B0057B91C /* IGItemVideo.swift */,
+				BF29326C277C606C00ECBAD1 /* IGItemActivity.swift */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -262,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF636FEF275F6D7300FE02DE /* Preview Assets.xcassets in Resources */,
+				BF293263277C3ED400ECBAD1 /* video1.mp4 in Resources */,
 				BFFEBA1A276721DB000AD4E2 /* Assets.xcassets in Resources */,
+				BF293262277C3ED400ECBAD1 /* video2.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,10 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF29326D277C606C00ECBAD1 /* IGItemActivity.swift in Sources */,
 				BFE04C38277B1EF200D8CFAB /* PhotoModel.swift in Sources */,
 				BFBA7A35277B1109004023D3 /* SearchViewModel.swift in Sources */,
 				BF636FF8275F721E00FE02DE /* LoginView.swift in Sources */,
 				BF783A5E2772DFBD008CA070 /* HomeViewModel.swift in Sources */,
+				BF7B1954277B62760057B91C /* VideoModel.swift in Sources */,
+				BF29326B277C5FE300ECBAD1 /* ActivityViewModel.swift in Sources */,
 				BFFBB7162761C3670011A91B /* HomeView.swift in Sources */,
 				BFFBB7182761E0E80011A91B /* DashboardView.swift in Sources */,
 				BF636FEA275F6D7100FE02DE /* SearchView.swift in Sources */,
@@ -314,11 +349,16 @@
 				BFA496B9277994EF0071B5F7 /* IGLoading.swift in Sources */,
 				BFA01F962772D4B100041A04 /* UserModel.swift in Sources */,
 				BFB1EB0C276AF828002FF4AC /* SignUpViewModel.swift in Sources */,
+				BF293269277C5E7100ECBAD1 /* ActivityModel.swift in Sources */,
 				BFFBB71B276206070011A91B /* SignUpView.swift in Sources */,
 				BF94D6E52769890900240970 /* IGLetterButton.swift in Sources */,
+				BF7B194E277B601B0057B91C /* IGItemVideo.swift in Sources */,
 				BFFEBA1D27673595000AD4E2 /* AppStrings.swift in Sources */,
-				BF7009C427632D5800E9E077 /* UserSettingView.swift in Sources */,
+				BF7B1952277B62670057B91C /* VideoViewModel.swift in Sources */,
+				BF7009C427632D5800E9E077 /* ProfileView.swift in Sources */,
+				BF7B1950277B61870057B91C /* VideoView.swift in Sources */,
 				BF636FE8275F6D7100FE02DE /* InstagramApp.swift in Sources */,
+				BF293266277C5CFE00ECBAD1 /* ActivityView.swift in Sources */,
 				BFAB77A52769F5850040EEDA /* NetworkModel.swift in Sources */,
 				BF7009C22763139600E9E077 /* LoginViewModel.swift in Sources */,
 			);
