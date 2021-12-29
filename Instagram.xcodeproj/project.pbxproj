@@ -116,11 +116,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		BF636FDB275F6D7100FE02DE = {
+		BF29326E277C6EF700ECBAD1 /* VideoDemo */ = {
 			isa = PBXGroup;
 			children = (
 				BF29325D277C3ED300ECBAD1 /* video1.mp4 */,
 				BF29325C277C3ED300ECBAD1 /* video2.mp4 */,
+			);
+			path = VideoDemo;
+			sourceTree = "<group>";
+		};
+		BF636FDB275F6D7100FE02DE = {
+			isa = PBXGroup;
+			children = (
+				BF29326E277C6EF700ECBAD1 /* VideoDemo */,
 				BF636FE6275F6D7100FE02DE /* Instagram */,
 				BF636FE5275F6D7100FE02DE /* Products */,
 				60B49D03810DFBB25D41FFB9 /* Pods */,
