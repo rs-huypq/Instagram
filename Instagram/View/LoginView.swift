@@ -47,7 +47,7 @@ struct LoginView: View {
                         actionButton: {
                             loginViewModel.createSession()
                         },
-                        disable: loginViewModel.isValid,
+                        disable: !loginViewModel.isValid,
                         destinationView: AnyView(DashboardView()),
                         isActiveNavigate: $loginViewModel.isSuccess
                     )

@@ -9,8 +9,6 @@ import AVKit
 import SwiftUI
 
 struct VideoView: View {
-    @State var index = 0
-    @State var top = 0
     @ObservedObject private var viewModel = VideoViewModel()
     
     var body: some View {

@@ -39,6 +39,9 @@ class AppStrings {
     // MARK: Search
     static let searchPlaceHolder = "Search"
     
+    // MARK: Reels
+    static let reelsHeader = "Reels"
+    
     // MARK: Activity
     static let activity = "Activity"
 }

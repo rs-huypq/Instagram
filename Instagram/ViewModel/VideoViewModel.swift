@@ -21,17 +21,17 @@ class VideoViewModel: ObservableObject {
             Video(
                 player: AVPlayer(url: getURLPath(source: "video1")),
                 replay: false,
-                userName: "Wang Huy",
-                userAvatar: "",
-                content: "",
+                userName: "Thỏ",
+                userAvatar: "thor",
+                content: "Aygroooo...",
                 liked: Int.random(in: 0...100),
                 comment: Int.random(in: 0...100)
             ),
             Video(
                 player: AVPlayer(url: getURLPath(source: "video2")),
                 replay: false,
-                userName: "",
-                userAvatar: "",
+                userName: "Cáo",
+                userAvatar: "thanos",
                 content: "",
                 liked: Int.random(in: 0...100),
                 comment: Int.random(in: 0...100)

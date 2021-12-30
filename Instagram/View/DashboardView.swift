@@ -15,7 +15,7 @@ struct DashboardView: View {
     let tabBarImageUnSelected = [AppImages.home, AppImages.search, AppImages.video, AppImages.heart, AppImages.user]
     
     var body: some View {
-        VStack(spacing: 0) {
+        ZStack() {
             switch selectedIndex {
             case 0:
                 HomeView()
@@ -33,30 +33,31 @@ struct DashboardView: View {
                 
             }
             
-            // Divider
-            Divider()
-            
             // Dashboard view
-            HStack {
-                ForEach (0..<5) { num in
-                    Button (action: {
-                        selectedIndex = num
-                    }, label: {
-                        Spacer()
+            VStack {
+                Spacer()
+                HStack {
+                    ForEach (0..<5) { num in
+                        Button (action: {
+                            selectedIndex = num
+                        }, label: {
+                            Spacer()
 
-                        if num == selectedIndex {
-                            Image(systemName: tabBarImage[num])
-                                .foregroundColor(.black)
-                        } else {
-                            Image(systemName: tabBarImageUnSelected[num])
-                                .foregroundColor(.gray)
-                        }
+                            if num == selectedIndex {
+                                Image(systemName: tabBarImage[num])
+                                    .foregroundColor(.black)
+                            } else {
+                                Image(systemName: tabBarImageUnSelected[num])
+                                    .foregroundColor(.gray)
+                            }
 
-                        Spacer()
-                    })
+                            Spacer()
+                        })
+                    }
                 }
+                .padding(.top, 12)
+                .background(.white)
             }
-            .padding(.top, 12)
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)

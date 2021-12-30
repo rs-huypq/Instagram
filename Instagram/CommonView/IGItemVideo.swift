@@ -21,28 +21,16 @@ struct PlayerView : View {
                         .offset(y: -6)
                     
                     VStack {
+                        TopReels()
                         Spacer()
-                        RightTabBar()
+                        RightTabBar(
+                            liked: self.data[i].liked,
+                            comment: self.data[i].comment,
+                            content: self.data[i].content,
+                            avatar: self.data[i].userAvatar,
+                            name: self.data[i].userName
+                        )
                     }
-                    
-                    if self.data[i].replay {
-                        
-                        Button(action: {
-                            
-                            // playing the video again...
-                            self.data[i].replay = false
-                            self.data[i].player.seek(to: .zero)
-                            self.data[i].player.play()
-                            
-                        }) {
-                            
-                            Image(systemName: "goforward")
-                                .resizable()
-                                .frame(width: 55, height: 60)
-                                .foregroundColor(.white)
-                        }
-                    }
-                    
                 }
             }
         }
@@ -65,74 +53,83 @@ struct PlayerView : View {
     }
 }
 
-struct RightTabBar: View {
-
-    var body: some View{
-        
-        HStack{
+struct TopReels: View {
+    var body: some View {
+        HStack {
+            Text(AppStrings.reelsHeader)
+                .fontWeight(.bold)
+                .font(.system(size: 28))
+            
             Spacer()
             
-            VStack(spacing: 35){
-                
-                Button(action:{
-                    
-                }) {
-                    Image("pic")
-                        .renderingMode(.original)
+            Button(action: {}) {
+                Image(systemName: "line.3.horizontal")
                     .resizable()
-                    .frame(width: 50, height: 50)
+                    .frame(width: 18, height: 12)
+                    .foregroundColor(.black)
+            }
+        }
+        .padding()
+        .padding(.top, 18)
+    }
+}
+
+struct RightTabBar: View {
+    var liked: Int
+    var comment: Int
+    var content: String
+    var avatar: String
+    var name: String
+
+    var body: some View{
+        HStack(alignment: .bottom){
+            VStack {
+                HStack(spacing: 8) {
+                    Image(avatar)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 40, height: 40)
                         .clipShape(Circle())
-                }
-                
-                Button(action:{
+                        .overlay(Circle().stroke(.white, lineWidth: 2))
                     
-                }){
-                    VStack(spacing: 8){
-                        
-                        Image(systemName: "suit.heart.fill")
-                        .font(.title)
+                    Text(name)
                         .foregroundColor(.white)
-                        
-                        Text("22K")
-                            .foregroundColor(.white)
-                    }
-                    
+                        .font(.system(size: 16))
+                        .fontWeight(.bold)
                 }
                 
-                Button(action:{
-                    
-                }){
-                    VStack(spacing: 8){
-                        
-                        Image(systemName: "message.fill")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        
-                        Text("22K")
-                            .foregroundColor(.white)
-                    }
-                    
-                }
-                
-                Button(action:{
-                    
-                }){
-                    VStack(spacing: 8){
-                        
-                        Image(systemName: "arrowshape.turn.up.right.fill")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        
-                        Text("22K")
-                            .foregroundColor(.white)
-                    }
-                    
-                }
-                
+                Text(content)
+                    .foregroundColor(.white)
+                    .font(.system(size: 16))
+                    .fontWeight(.medium)
+            }
+            .padding(.bottom, 100)
+            .padding(.leading, 10)
+            
+            Spacer()
+            
+            VStack(spacing: 35) {
+                buildActionVideo(image: "suit.heart.fill", valueLabel: "\(liked)K")
+                buildActionVideo(image: "message.fill", valueLabel: "\(comment)K")
+                buildActionVideo(image: "arrowshape.turn.up.right.fill", valueLabel: "15K")
             }
             .padding(.bottom, 100)
             .padding(.trailing)
         }
+    }
+}
+
+func buildActionVideo(image: String, valueLabel: String) -> some View {
+    return Button(action:{}){
+        VStack(spacing: 8){
+            Image(systemName: image)
+            .font(.title)
+            .foregroundColor(.white)
+            
+            Text(valueLabel)
+                .foregroundColor(.white)
+        }
+        
     }
 }
 
