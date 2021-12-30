@@ -7,138 +7,105 @@
 
 import SwiftUI
 
-struct UserSettingView: View {
-    @ObservedObject var viewModel = LoginViewModel()
-        let buttonWidth = (UIScreen.main.bounds.width - 80) / 2
-        
-        var body: some View {
-            LoadingView(isShowing: $viewModel.isLoading) {
-                VStack(alignment: .leading) {
-                    HStack(alignment: .center) {
-                        Text("HUY")
-                        Spacer()
-//                        HStack(alignment: .center, spacing: 20) {
-//                            NavigationLink(destination: CommunicateView()) {
-//                                Image(Images.plus_unselected.rawValue)
-//                                    .resizable()
-//                                    .aspectRatio(1, contentMode: .fit)
-//                                    .frame(width: 30, height: 30)
-//                            }
-//                            NavigationLink(destination: SignInView(), isActive: $viewModel.isActiveNavigate) {
-//                                Button(action: viewModel.logout) {
-//                                    Image(Images.list.rawValue)
-//                                        .resizable()
-//                                        .renderingMode(.template)
-//                                        .foregroundColor(.gray)
-//                                        .aspectRatio(1, contentMode: .fit)
-//                                        .frame(width: 30, height: 28)
-//                                }
-//                            }
-//                        }
-                    }
-                    .padding(.vertical, 10)
-                    .padding(.horizontal, 10)
-                    
-                    ScrollView(showsIndicators: false) {
-                        VStack(alignment: .leading) {
-                            HStack(alignment: .center) {
-                                Image(AppImages.user)
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                    .clipShape(Circle())
-                                    .shadow(radius: 5)
-                                    .scaledToFill()
-                                
-                                Spacer()
-//                                ForEach(followingData) { value in
-//                                    FollowItem(numberFollow: value.followNumber, followType: value.followType)
-//                                }
-                            }
-                            .padding(.bottom, 20)
-//                            ListInfomationItem(info1: Strings.info1.rawValue, info2: Strings.info2.rawValue, info3: Strings.info3.rawValue, info4: Strings.info4.rawValue, info5: Strings.info5.rawValue, info6: Strings.info6.rawValue)
-                            
-                            HStack(alignment: .center) {
-                                ButtonText(action: actionButton, buttonWidth: buttonWidth, buttonText: "")
-                                Spacer()
-                                ButtonText(action: actionButton, buttonWidth: buttonWidth, buttonText: "" )
-                            }
-                            HStack(alignment: .center) {
-//                                ButtonImage(action: actionButton, image: Images.plus_unselected.rawValue)
-                                Spacer()
-//                                ButtonImage(action: actionButton, image: Images.film.rawValue)
-                                Spacer()
-//                                ButtonImage(action: actionButton, image: Images.profile.rawValue)
-                            }
-                            .padding(.horizontal, 60)
-                            .padding(.vertical, 10)
-                            
-                        }
-                        .padding(.horizontal, 10)
-//                        ImageGrid(numberOfImage: 20)
-                    }
+struct ProfileView: View {
+    @ObservedObject private var viewModel = ProfileViewModel()
+    
+    
+    var body: some View {
+        GeometryReader { geo in
+            VStack(alignment: .leading) {
+                buildTopProfile(userName: viewModel.profile.userName)
+                buildProfile(
+                    image: viewModel.profile.userAvatar,
+                    posts: viewModel.profile.posts,
+                    follower: viewModel.profile.followers,
+                    follwing: viewModel.profile.following
+                )
+                buildDescription(description: viewModel.profile.userDescription)
+                buildButtonEdit()
+                // Tabs
+                IGTopTabView(tabs: viewModel.tabs, geoWidth: geo.size.width, selectedTab: $viewModel.selectedTab)
+                ScrollView {
+                    IGGridImage(gridLayout: viewModel.gridLayout, photo: viewModel.profile.photo)
                 }
             }
         }
-        func actionButton() {
-            print("as")
-        }
-
+    }
 }
 
-struct FollowItem: View {
-    var numberFollow: String
-    var followType: String
-    var body: some View {
-        VStack {
-            Text(numberFollow)
-                .font(.headline)
-            Text(followType)
-                .font(.system(size: 15))
+func buildTopProfile(userName: String) -> some View {
+    return HStack(spacing: 18) {
+        Text(userName)
+            .fontWeight(.bold)
+            .font(.system(size: 28))
+        
+        Spacer()
+        
+        Button(action: {}) {
+            Image(systemName: "slider.horizontal.3")
+                .resizable()
+                .frame(width: 18, height: 18)
+                .foregroundColor(.black)
         }
+    }
+    .padding()
+    .background(.gray.opacity(0.1))
+}
+
+func buildProfile(image: String, posts: Int, follower: Int, follwing: Int) -> some View {
+    HStack(spacing: 18) {
+        Image(image)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: 100, height: 100)
+            .clipShape(Circle())
+        
+        Spacer()
+        
+        buildInfoProfile(label: "Posts", value: posts)
+        buildInfoProfile(label: "Followers", value: follower)
+        buildInfoProfile(label: "Following", value: follwing)
+    }
+    .padding(.horizontal, 16)
+}
+
+func buildInfoProfile(label: String, value: Int) -> some View {
+    return VStack(alignment: .center) {
+        Text("\(value)")
+            .font(.system(size: 16))
+            .fontWeight(.bold)
+        Text(label)
+            .font(.system(size: 14))
+            .fontWeight(.regular)
+    }
+}
+
+func buildDescription(description: String) -> some View {
+    return Text(description)
+        .font(.system(size: 12))
+        .fontWeight(.medium)
+        .padding()
+}
+
+func buildButtonEdit() -> some View {
+    return HStack(spacing: 4) {
+        Button(action: {}) {
+            Text("Edit Profile")
+                .font(.system(size: 14))
+                .foregroundColor(.black)
+            
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 30)
+        .border(Color.gray.opacity(0.8), width: 1)
+        .cornerRadius(4)
         .padding(.horizontal, 10)
     }
 }
 
-struct ListInfomationItem: View {
-    var info1: String
-    var info2: String
-    var info3: String
-    var info4: String
-    var info5: String
-    var info6: String
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Text(info1)
-            Text(info2)
-            Text(info3)
-            Text(info4)
-            Text(info5)
-            Text(info6)
-        }
-        .padding(.horizontal, 15)
-    }
-}
-
-struct ButtonText: View {
-    var action: () -> Void
-    var buttonWidth: Double
-    var buttonText: String
-    var body: some View {
-        Button(action: action, label: {
-            Text(buttonText)
-                .frame(width: buttonWidth, height: 30)
-                .foregroundColor(.black)
-                .border(Color.gray, width: 1)
-                .cornerRadius(1)
-                .padding(.horizontal, 10)
-        })
-    }
-}
-
-
-struct UserSettingView_Previews: PreviewProvider {
+#if DEBUG
+struct ProfileViewView_Previews: PreviewProvider {
     static var previews: some View {
-        UserSettingView()
+        ProfileView()
     }
 }
+#endif

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserModel: Identifiable {
+class PostModel: Identifiable {
     var name: String = ""
     var avatar: String = ""
     var photo: Photo

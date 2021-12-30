@@ -31,17 +31,7 @@ struct SearchView: View {
             
             LoadingView(isShowing: $viewModel.isLoading, color: .black) {
                 ScrollView {
-                    LazyVGrid(columns: gridLayout, spacing: 1) {
-                        ForEach(viewModel.listPhoto) { photo in
-                            Image(photo.name)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(minWidth: 0, maxWidth: .infinity)
-                                .frame(height: 130)
-                                .cornerRadius(0)
-                        }
-                    }
-                    .padding(.horizontal, 1)
+                    IGGridImage(gridLayout: gridLayout, photo: viewModel.listPhoto)
                 }
             }
         }

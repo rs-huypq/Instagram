@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct IGStory: View {
-    var users: [UserModel] = [UserModel]()
+    var users: [PostModel] = [PostModel]()
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {

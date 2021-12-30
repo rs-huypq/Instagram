@@ -39,11 +39,11 @@ func _buildTopHome() -> some View {
     .padding(.horizontal, 16)
 }
 
-func _buildStory(users: [UserModel]) -> some View {
+func _buildStory(users: [PostModel]) -> some View {
     return IGStory(users: users)
 }
 
-func _buildPosts(users: [UserModel]) -> some View {    
+func _buildPosts(users: [PostModel]) -> some View {    
     return IGPost(users: users)
 }
 

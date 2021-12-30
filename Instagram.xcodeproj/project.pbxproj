@@ -29,8 +29,12 @@
 		BF7B1950277B61870057B91C /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B194F277B61870057B91C /* VideoView.swift */; };
 		BF7B1952277B62670057B91C /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B1951277B62670057B91C /* VideoViewModel.swift */; };
 		BF7B1954277B62760057B91C /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B1953277B62760057B91C /* VideoModel.swift */; };
+		BF84DDCE277D971B00FDEB69 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DDCD277D971A00FDEB69 /* ProfileViewModel.swift */; };
+		BF84DDD0277D972D00FDEB69 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DDCF277D972D00FDEB69 /* ProfileModel.swift */; };
+		BF84DDD3277D97F000FDEB69 /* IGGridImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DDD2277D97F000FDEB69 /* IGGridImage.swift */; };
+		BF84DDD5277DAE2300FDEB69 /* IGTopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF84DDD4277DAE2300FDEB69 /* IGTopTabView.swift */; };
 		BF94D6E52769890900240970 /* IGLetterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94D6E42769890900240970 /* IGLetterButton.swift */; };
-		BFA01F962772D4B100041A04 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA01F952772D4B100041A04 /* UserModel.swift */; };
+		BFA01F962772D4B100041A04 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA01F952772D4B100041A04 /* PostModel.swift */; };
 		BFA496B9277994EF0071B5F7 /* IGLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA496B8277994EF0071B5F7 /* IGLoading.swift */; };
 		BFAB77A52769F5850040EEDA /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB77A42769F5850040EEDA /* NetworkModel.swift */; };
 		BFB1EB0C276AF828002FF4AC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1EB0B276AF828002FF4AC /* SignUpViewModel.swift */; };
@@ -71,8 +75,12 @@
 		BF7B194F277B61870057B91C /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		BF7B1951277B62670057B91C /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		BF7B1953277B62760057B91C /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		BF84DDCD277D971A00FDEB69 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		BF84DDCF277D972D00FDEB69 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		BF84DDD2277D97F000FDEB69 /* IGGridImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGGridImage.swift; sourceTree = "<group>"; };
+		BF84DDD4277DAE2300FDEB69 /* IGTopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTopTabView.swift; sourceTree = "<group>"; };
 		BF94D6E42769890900240970 /* IGLetterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLetterButton.swift; sourceTree = "<group>"; };
-		BFA01F952772D4B100041A04 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BFA01F952772D4B100041A04 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		BFA496B8277994EF0071B5F7 /* IGLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLoading.swift; sourceTree = "<group>"; };
 		BFAB77A42769F5850040EEDA /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		BFB1EB0B276AF828002FF4AC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -192,6 +200,7 @@
 				BFBA7A34277B1109004023D3 /* SearchViewModel.swift */,
 				BF7B1951277B62670057B91C /* VideoViewModel.swift */,
 				BF29326A277C5FE300ECBAD1 /* ActivityViewModel.swift */,
+				BF84DDCD277D971A00FDEB69 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,11 +208,12 @@
 		BF7009B72762F93B00E9E077 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BFA01F952772D4B100041A04 /* UserModel.swift */,
+				BFA01F952772D4B100041A04 /* PostModel.swift */,
 				BFAB77A42769F5850040EEDA /* NetworkModel.swift */,
 				BFE04C37277B1EF200D8CFAB /* PhotoModel.swift */,
 				BF7B1953277B62760057B91C /* VideoModel.swift */,
 				BF293268277C5E7100ECBAD1 /* ActivityModel.swift */,
+				BF84DDCF277D972D00FDEB69 /* ProfileModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +229,8 @@
 				BF053DDB27740EF600A07B14 /* IGItemPost.swift */,
 				BF7B194D277B601B0057B91C /* IGItemVideo.swift */,
 				BF29326C277C606C00ECBAD1 /* IGItemActivity.swift */,
+				BF84DDD2277D97F000FDEB69 /* IGGridImage.swift */,
+				BF84DDD4277DAE2300FDEB69 /* IGTopTabView.swift */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -341,6 +353,7 @@
 				BF29326D277C606C00ECBAD1 /* IGItemActivity.swift in Sources */,
 				BFE04C38277B1EF200D8CFAB /* PhotoModel.swift in Sources */,
 				BFBA7A35277B1109004023D3 /* SearchViewModel.swift in Sources */,
+				BF84DDD0277D972D00FDEB69 /* ProfileModel.swift in Sources */,
 				BF636FF8275F721E00FE02DE /* LoginView.swift in Sources */,
 				BF783A5E2772DFBD008CA070 /* HomeViewModel.swift in Sources */,
 				BF7B1954277B62760057B91C /* VideoModel.swift in Sources */,
@@ -352,11 +365,14 @@
 				BFC738E4276C332500ABD656 /* NetworkManager.swift in Sources */,
 				BFFEBA1F27674769000AD4E2 /* AppImages.swift in Sources */,
 				BF053DDA27740E4200A07B14 /* IGStory.swift in Sources */,
+				BF84DDCE277D971B00FDEB69 /* ProfileViewModel.swift in Sources */,
+				BF84DDD5277DAE2300FDEB69 /* IGTopTabView.swift in Sources */,
 				BF32500B27682C300094F875 /* IGButton.swift in Sources */,
 				BF7009BE2762FF6C00E9E077 /* IGTextField.swift in Sources */,
 				BFA496B9277994EF0071B5F7 /* IGLoading.swift in Sources */,
-				BFA01F962772D4B100041A04 /* UserModel.swift in Sources */,
+				BFA01F962772D4B100041A04 /* PostModel.swift in Sources */,
 				BFB1EB0C276AF828002FF4AC /* SignUpViewModel.swift in Sources */,
+				BF84DDD3277D97F000FDEB69 /* IGGridImage.swift in Sources */,
 				BF293269277C5E7100ECBAD1 /* ActivityModel.swift in Sources */,
 				BFFBB71B276206070011A91B /* SignUpView.swift in Sources */,
 				BF94D6E52769890900240970 /* IGLetterButton.swift in Sources */,

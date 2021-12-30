@@ -26,7 +26,7 @@ struct DashboardView: View {
             case 3:
                 ActivityView()
             case 4:
-                UserSettingView()
+                ProfileView()
                 
             default:
                 Color.white.edgesIgnoringSafeArea(.top)

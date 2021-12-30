@@ -10,7 +10,7 @@ import SwiftUI
 struct IGPost: View {
     @ObservedObject private var homeViewModel = HomeViewModel()
     
-    var users: [UserModel] = [UserModel]()
+    var users: [PostModel] = [PostModel]()
     
     var body: some View {
         ForEach(users) { user in
