@@ -10,12 +10,6 @@ import SwiftUI
 struct SearchView: View {
     @ObservedObject private var viewModel = SearchViewModel()
     
-    @State var gridLayout: [GridItem] = [
-        GridItem(.flexible(), spacing: 1),
-        GridItem(.flexible(), spacing: 1),
-        GridItem(.flexible(), spacing: 1)
-    ]
-    
     var body: some View {
         VStack(spacing: 0) {
             IGTextField(
@@ -31,7 +25,7 @@ struct SearchView: View {
             
             LoadingView(isShowing: $viewModel.isLoading, color: .black) {
                 ScrollView {
-                    IGGridImage(gridLayout: gridLayout, photo: viewModel.listPhoto)
+                    IGGridImage(gridLayout: viewModel.gridLayout, photo: viewModel.listPhoto)
                 }
             }
         }

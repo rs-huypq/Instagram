@@ -7,11 +7,17 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class SearchViewModel: ObservableObject {
     @Published var search = ""
     @Published var isLoading = false
-    @Published var listPhoto: [Photo] = [Photo]()   
+    @Published var listPhoto: [Photo] = [Photo]()
+    @Published var gridLayout: [GridItem] = [
+        GridItem(.flexible(), spacing: 1),
+        GridItem(.flexible(), spacing: 1),
+        GridItem(.flexible(), spacing: 1)
+    ]
     
     func loadImage() {
         isLoading = true
